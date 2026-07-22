@@ -1,0 +1,1263 @@
+<title>Sacred Charms of Thailand — A Catalogue of เครื่องราง</title>
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --ground:#ece5d6; --surface:#f4efe3; --surface-2:#e6ddca;
+    --ink:#241d15; --ink-soft:#5c5140; --ink-faint:#8a7d64;
+    --line:rgba(40,30,18,.16); --line-strong:rgba(40,30,18,.30);
+    --gilt:#9a6f27; --gilt-bright:#b6862f; --gilt-glow:rgba(154,111,39,.14);
+    --cinnabar:#a5301f; --indigo:#33475e;
+    --claim-cat:var(--gilt); --claim-trad:var(--cinnabar); --claim-inf:var(--indigo);
+    --shadow:0 1px 0 rgba(255,255,255,.5), 0 18px 40px -28px rgba(40,30,18,.55);
+
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --thai:"Sukhumvit Set","Thonburi","Noto Serif Thai","Noto Sans Thai","Leelawadee UI",sans-serif;
+    --sans:"Avenir Next",Avenir,"Segoe UI",system-ui,-apple-system,sans-serif;
+    --mono:"SF Mono","JetBrains Mono",ui-monospace,Menlo,monospace;
+    --wrap:1120px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#17120d; --surface:#201a12; --surface-2:#2a2216;
+      --ink:#ece2ce; --ink-soft:#b3a790; --ink-faint:#7d7259;
+      --line:rgba(222,202,158,.15); --line-strong:rgba(222,202,158,.28);
+      --gilt:#cfa14b; --gilt-bright:#e0b768; --gilt-glow:rgba(207,161,75,.13);
+      --cinnabar:#dd6a4f; --indigo:#8cb2d4;
+      --shadow:0 1px 0 rgba(255,255,255,.04), 0 24px 50px -30px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#ece5d6; --surface:#f4efe3; --surface-2:#e6ddca;
+    --ink:#241d15; --ink-soft:#5c5140; --ink-faint:#8a7d64;
+    --line:rgba(40,30,18,.16); --line-strong:rgba(40,30,18,.30);
+    --gilt:#9a6f27; --gilt-bright:#b6862f; --gilt-glow:rgba(154,111,39,.14);
+    --cinnabar:#a5301f; --indigo:#33475e;
+    --shadow:0 1px 0 rgba(255,255,255,.5), 0 18px 40px -28px rgba(40,30,18,.55);
+  }
+  :root[data-theme="dark"]{
+    --ground:#17120d; --surface:#201a12; --surface-2:#2a2216;
+    --ink:#ece2ce; --ink-soft:#b3a790; --ink-faint:#7d7259;
+    --line:rgba(222,202,158,.15); --line-strong:rgba(222,202,158,.28);
+    --gilt:#cfa14b; --gilt-bright:#e0b768; --gilt-glow:rgba(207,161,75,.13);
+    --cinnabar:#dd6a4f; --indigo:#8cb2d4;
+    --shadow:0 1px 0 rgba(255,255,255,.04), 0 24px 50px -30px rgba(0,0,0,.8);
+  }
+
+  /* ============ BASE ============ */
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:18px; line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(var(--gilt-glow) 1px,transparent 1px);
+    background-size:26px 26px;
+  }
+  :lang(th),.th{font-family:var(--thai)}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 26px}
+  section{padding:64px 0; border-top:1px solid var(--line)}
+  h1,h2,h3{font-weight:600; text-wrap:balance; letter-spacing:-.01em; margin:0}
+  p{margin:0}
+  a{color:var(--gilt); text-decoration-thickness:1px; text-underline-offset:2px}
+  ::selection{background:var(--gilt);color:var(--ground)}
+
+  .eyebrow{font-family:var(--sans); font-size:12.5px; font-weight:600;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--gilt);}
+  .sect-head{display:flex; flex-direction:column; gap:10px; margin-bottom:34px}
+  .sect-head h2{font-size:clamp(26px,4vw,38px); line-height:1.1}
+  .sect-head .lede{color:var(--ink-soft); max-width:62ch; font-size:19px}
+
+  /* ============ HERO ============ */
+  .hero{border-top:none; padding:76px 0 60px; position:relative; overflow:hidden}
+  .hero-grid{display:grid; grid-template-columns:1.35fr .65fr; gap:44px; align-items:center}
+  .hero .kicker{font-family:var(--sans); font-size:13px; font-weight:600;
+    letter-spacing:.24em; text-transform:uppercase; color:var(--gilt); margin-bottom:20px}
+  .hero h1{font-size:clamp(38px,7vw,74px); line-height:.98; letter-spacing:-.02em}
+  .hero h1 .th{display:block; font-weight:500; font-size:.62em; color:var(--gilt);
+    letter-spacing:0; margin-bottom:.12em}
+  .hero .thesis{margin-top:26px; font-size:22px; line-height:1.5; max-width:40ch; color:var(--ink-soft)}
+  .hero .thesis b{color:var(--ink); font-weight:600}
+  .emblem{width:100%; max-width:300px; margin:0 auto; display:block}
+  .emblem path,.emblem circle,.emblem line,.emblem rect,.emblem use{
+    fill:none; stroke:var(--gilt); stroke-width:1.1; vector-effect:non-scaling-stroke}
+  .emblem .bindu{fill:var(--cinnabar); stroke:none}
+  .emblem .soft{stroke:var(--gilt); opacity:.45}
+
+  .stats{display:flex; flex-wrap:wrap; gap:14px; margin-top:42px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:3px;
+    padding:14px 20px; box-shadow:var(--shadow); flex:1 1 150px}
+  .stat .n{font-size:30px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em; line-height:1}
+  .stat .n small{font-size:15px; color:var(--gilt); font-weight:600}
+  .stat .l{font-family:var(--sans); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-faint); margin-top:7px}
+
+  /* ============ LEGEND ============ */
+  .legend-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
+  .key{background:var(--surface); border:1px solid var(--line); border-left-width:3px;
+    border-radius:3px; padding:16px 18px}
+  .key.cat{border-left-color:var(--claim-cat)}
+  .key.trad{border-left-color:var(--claim-trad)}
+  .key.inf{border-left-color:var(--claim-inf)}
+  .key h4{font-family:var(--sans); font-size:13px; letter-spacing:.04em; text-transform:uppercase;
+    margin:0 0 6px; display:flex; align-items:center; gap:8px}
+  .key p{font-size:15.5px; color:var(--ink-soft); line-height:1.5}
+
+  /* claim tags (inline) */
+  .tag{font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.05em;
+    text-transform:uppercase; padding:1px 7px; border-radius:2px; white-space:nowrap;
+    vertical-align:.08em; border:1px solid currentColor}
+  .tag.cat{color:var(--claim-cat)} .tag.trad{color:var(--claim-trad)} .tag.inf{color:var(--claim-inf)}
+
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .dot.cat{background:var(--claim-cat)} .dot.trad{background:var(--claim-trad)} .dot.inf{background:var(--claim-inf)}
+
+  /* ============ TIMELINE ============ */
+  .timeline{display:grid; gap:0; margin-top:6px}
+  .era{display:grid; grid-template-columns:190px 1fr; gap:28px; padding:24px 0; position:relative}
+  .era + .era{border-top:1px solid var(--line)}
+  .era .when{font-family:var(--mono); font-size:14px; color:var(--gilt); padding-top:4px;
+    letter-spacing:.01em}
+  .era .when b{display:block; font-family:var(--serif); font-size:20px; color:var(--ink);
+    letter-spacing:-.01em; margin-bottom:2px; font-weight:600}
+  .era .body h3{font-size:20px; margin-bottom:6px}
+  .era .body p{color:var(--ink-soft); font-size:16.5px; max-width:64ch}
+
+  /* ============ SPECIMEN CATALOGUE ============ */
+  .cat-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:18px}
+  .spec{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:20px 20px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px;
+    transition:transform .18s ease, border-color .18s ease}
+  .spec:hover{transform:translateY(-3px); border-color:var(--line-strong)}
+  .spec .code{font-family:var(--mono); font-size:12px; color:var(--gilt); letter-spacing:.08em}
+  .spec .name{display:flex; flex-direction:column; gap:1px}
+  .spec .name .th{font-size:24px; line-height:1.15; font-weight:500}
+  .spec .name .rom{font-size:19px; font-weight:600; letter-spacing:-.01em}
+  .spec .name .en{font-family:var(--sans); font-size:13.5px; color:var(--ink-faint); letter-spacing:.02em}
+  .spec .meta{font-family:var(--mono); font-size:12px; color:var(--ink-faint);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0;
+    display:flex; flex-wrap:wrap; gap:4px 10px}
+  .spec .meta b{color:var(--ink-soft); font-weight:400}
+  .spec .desc{font-size:15.5px; line-height:1.55; color:var(--ink)}
+  .spec .prov{font-size:14px; color:var(--ink-soft); font-style:italic}
+  .chips{display:flex; flex-wrap:wrap; gap:6px}
+  .chip{font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.03em;
+    text-transform:uppercase; color:var(--gilt); border:1px solid var(--gilt);
+    border-radius:20px; padding:2px 10px; opacity:.9}
+  .spec .claims{display:flex; gap:6px; margin-top:auto; padding-top:4px}
+
+  /* ============ TABLE ============ */
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:4px; box-shadow:var(--shadow)}
+  table{border-collapse:collapse; width:100%; min-width:620px; background:var(--surface)}
+  th,td{text-align:left; padding:13px 18px; border-bottom:1px solid var(--line); font-size:16px}
+  th{font-family:var(--sans); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-faint); font-weight:600; background:var(--surface-2)}
+  tbody tr:last-child td{border-bottom:none}
+  td .th{font-family:var(--thai)}
+  td .r{color:var(--ink-soft); font-size:14px}
+
+  /* ============ MARKETPLACE ============ */
+  .mk-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:26px; align-items:start}
+  .listings{display:flex; flex-direction:column; gap:10px}
+  .listing{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:12px 16px; display:flex; gap:14px; align-items:baseline}
+  .listing .th{font-family:var(--thai); font-size:15px; line-height:1.4; flex:1}
+  .listing .px{font-family:var(--mono); font-size:13px; color:var(--gilt); white-space:nowrap;
+    font-variant-numeric:tabular-nums}
+  .terms{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:20px 22px}
+  .terms h4{font-family:var(--sans); font-size:13px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-faint); margin:0 0 14px}
+  .term{padding:11px 0; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:2px}
+  .term:first-of-type{border-top:none; padding-top:0}
+  .term .t{font-size:17px} .term .t .th{font-family:var(--thai); color:var(--gilt); margin-right:8px}
+  .term .g{font-size:14.5px; color:var(--ink-soft)}
+
+  .callout{background:var(--surface-2); border:1px solid var(--line-strong); border-radius:4px;
+    padding:24px 26px; display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:start}
+  .callout .mark{font-family:var(--serif); font-size:40px; color:var(--gilt); line-height:.8}
+  .callout p{color:var(--ink); font-size:17px; line-height:1.6}
+  .callout p + p{margin-top:12px}
+  .callout b{color:var(--ink)}
+
+  /* ============ MARKET TAXONOMY ============ */
+  .mtax-cat{margin-bottom:30px}
+  .mtax-cat h4{font-size:18px; font-weight:600; margin-bottom:4px; letter-spacing:-.005em}
+  .mtax-cat h4 .n{font-family:var(--sans); font-size:13px; font-weight:600; color:var(--gilt); letter-spacing:.02em}
+  .mtax-cat .catnote{font-size:14.5px; color:var(--ink-soft); margin-bottom:12px; max-width:74ch}
+  .mtax-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:0 22px;
+    background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:4px 18px; box-shadow:var(--shadow)}
+  .mrow{display:grid; grid-template-columns:auto 1fr; column-gap:10px; row-gap:0;
+    padding:9px 0; border-bottom:1px solid var(--line); align-items:baseline}
+  .mtax-grid .mrow:nth-last-child(-n+2){border-bottom:none}
+  .mrow .th{font-family:var(--thai); font-size:15.5px; color:var(--ink); white-space:nowrap}
+  .mrow .gloss{grid-column:2; font-size:13.5px; color:var(--ink-soft); line-height:1.4}
+  .mrow .mstat{grid-column:1/-1; font-family:var(--mono); font-size:11px; color:var(--gilt);
+    font-variant-numeric:tabular-nums; margin-top:1px; letter-spacing:.01em}
+  code{font-family:var(--mono); font-size:.9em; background:var(--surface-2); padding:1px 5px; border-radius:2px}
+  @media (max-width:820px){ .mtax-grid{grid-template-columns:1fr} }
+
+  /* ============ FORMULARY ============ */
+  .grammar{display:grid; grid-template-columns:1.05fr .95fr; gap:26px; align-items:start; margin-bottom:34px}
+  .grammar .note{color:var(--ink-soft); font-size:16.5px; line-height:1.6}
+  .grammar .note b{color:var(--ink)}
+  .na-ladder{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    box-shadow:var(--shadow); overflow:hidden}
+  .na-ladder .lh{font-family:var(--sans); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-faint); padding:12px 18px; background:var(--surface-2); border-bottom:1px solid var(--line)}
+  .rung{display:grid; grid-template-columns:96px 1fr; gap:14px; padding:11px 18px; align-items:baseline}
+  .rung + .rung{border-top:1px solid var(--line)}
+  .rung .step{font-family:var(--mono); font-size:13px; color:var(--gilt)}
+  .rung .syl{font-family:var(--thai); font-size:17px; color:var(--ink)}
+
+  .recipes{display:grid; grid-template-columns:repeat(auto-fill,minmax(345px,1fr)); gap:18px}
+  .recipe{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:22px;
+    box-shadow:var(--shadow); display:flex; flex-direction:column; gap:14px;
+    transition:border-color .18s ease}
+  .recipe:hover{border-color:var(--line-strong)}
+  .recipe > header{display:flex; flex-direction:column; gap:2px; padding-bottom:4px}
+  .recipe .rt{font-family:var(--thai); font-size:24px; font-weight:500; line-height:1.15}
+  .recipe .rr{font-size:18px; font-weight:600; letter-spacing:-.01em}
+  .recipe .rfrom{font-family:var(--sans); font-size:12.5px; color:var(--ink-faint); margin-top:3px; letter-spacing:.02em}
+  .field{display:grid; grid-template-columns:82px 1fr; gap:12px; align-items:start}
+  .field .fl{font-family:var(--sans); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--gilt); padding-top:3px; font-weight:700}
+  .field .fv{font-size:15px; color:var(--ink); line-height:1.5}
+  .field .fv .th{font-family:var(--thai)}
+  .katha{font-family:var(--thai); font-size:15.5px; line-height:1.65; background:var(--surface-2);
+    border-left:3px solid var(--gilt); border-radius:0 3px 3px 0; padding:9px 13px; color:var(--ink); margin-top:2px}
+  .katha .mk{color:var(--gilt); font-weight:700; padding:0 3px}
+  .katha .en{display:block; font-family:var(--sans); font-size:12px; color:var(--ink-faint);
+    margin-top:5px; letter-spacing:.01em; line-height:1.45}
+  .recipe .claims{display:flex; gap:6px; margin-top:auto; padding-top:6px}
+
+  .fed{display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:start; margin-top:26px;
+    background:var(--surface-2); border:1px solid var(--line-strong); border-radius:4px; padding:22px 26px}
+  .fed .mark{font-size:34px; line-height:.9}
+  .fed h3{font-size:20px; margin-bottom:8px}
+  .fed p{color:var(--ink); font-size:16px; line-height:1.6}
+  .fed p b{color:var(--ink)}
+  .sens{margin-top:22px; font-size:14.5px; color:var(--ink-soft); line-height:1.55;
+    border-left:2px solid var(--line-strong); padding-left:16px; max-width:76ch}
+
+  @media (max-width:820px){
+    .grammar{grid-template-columns:1fr; gap:16px}
+    .fed{grid-template-columns:1fr; gap:10px}
+    .field{grid-template-columns:74px 1fr}
+  }
+
+  /* ============ COMPLETE INDEX ============ */
+  .findex{display:grid; grid-template-columns:repeat(auto-fill,minmax(325px,1fr)); gap:18px; margin-top:8px}
+  .fcat{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:16px 18px; box-shadow:var(--shadow); break-inside:avoid}
+  .fcat h3{font-size:14px; font-family:var(--sans); letter-spacing:.03em; text-transform:uppercase;
+    color:var(--gilt); margin:0 0 10px; border-bottom:1px solid var(--line); padding-bottom:8px; font-weight:700}
+  .fcat h3 span{color:var(--ink-faint); font-weight:600}
+  .fcat ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px}
+  .fcat li{display:grid; grid-template-columns:34px 1fr; gap:9px; align-items:baseline; font-size:14px; line-height:1.4}
+  .fcat .fp{font-family:var(--mono); font-size:11px; color:var(--gilt); font-variant-numeric:tabular-nums}
+  .fcat .fth{font-family:var(--thai); color:var(--ink)}
+  .fcat .fg{grid-column:2; font-family:var(--sans); font-size:11.5px; color:var(--ink-faint); line-height:1.35}
+
+  footer{border-top:1px solid var(--line); padding:40px 0 60px; color:var(--ink-faint);
+    font-family:var(--sans); font-size:13.5px; line-height:1.7}
+  footer .th{font-family:var(--thai)}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:820px){
+    body{font-size:17px}
+    .hero-grid{grid-template-columns:1fr; gap:8px}
+    .emblem{max-width:210px; margin-top:14px; order:-1}
+    .era{grid-template-columns:1fr; gap:8px}
+    .era .when{padding-top:0}
+    .mk-grid{grid-template-columns:1fr}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important; transition:none !important}
+  }
+  .reveal{opacity:0; transform:translateY(14px); animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .r2{animation-delay:.08s}.r3{animation-delay:.16s}
+  @keyframes rise{to{opacity:1; transform:none}}
+</style>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="kicker">A Reference Catalogue · เครื่องราง &amp; พระเครื่อง</div>
+      <h1><span class="th">เครื่องรางของขลัง</span>Sacred Charms of Thailand</h1>
+      <p class="thesis">One continuous ledger of power — from the <b>palm-leaf treatise</b> and the temple casting-yard to the <b>listing on a phone screen</b>. The same objects, the same claims, an unbroken line.</p>
+      <div class="stats">
+        <div class="stat"><div class="n">22</div><div class="l">Illustrated in depth</div></div>
+        <div class="stat"><div class="n">112</div><div class="l">Market varieties, counted</div></div>
+        <div class="stat"><div class="n">~1,000<small> yr</small></div><div class="l">Span, Hariphunchai→now</div></div>
+        <div class="stat"><div class="n">4,778</div><div class="l">Live listings mined</div></div>
+        <div class="stat"><div class="n">160<small> ตำรา</small></div><div class="l">Formulas, transcribed &amp; translated</div></div>
+      </div>
+    </div>
+    <svg class="emblem reveal r2" viewBox="0 0 200 200" role="img" aria-label="A stylised yantra: square gate, eight-petal lotus, downward triangle, and central bindu">
+      <defs>
+        <path id="petal" d="M100 42 C110 60 110 76 100 92 C90 76 90 60 100 42 Z"/>
+      </defs>
+      <!-- bhupura: outer square with gate ticks -->
+      <rect x="18" y="18" width="164" height="164"/>
+      <rect class="soft" x="30" y="30" width="140" height="140"/>
+      <line class="soft" x1="100" y1="18" x2="100" y2="30"/>
+      <line class="soft" x1="100" y1="170" x2="100" y2="182"/>
+      <line class="soft" x1="18" y1="100" x2="30" y2="100"/>
+      <line class="soft" x1="170" y1="100" x2="182" y2="100"/>
+      <!-- inscribed circle -->
+      <circle cx="100" cy="100" r="66"/>
+      <circle class="soft" cx="100" cy="100" r="52"/>
+      <!-- eight-petal lotus -->
+      <use href="#petal"/>
+      <use href="#petal" transform="rotate(45 100 100)"/>
+      <use href="#petal" transform="rotate(90 100 100)"/>
+      <use href="#petal" transform="rotate(135 100 100)"/>
+      <use href="#petal" transform="rotate(180 100 100)"/>
+      <use href="#petal" transform="rotate(225 100 100)"/>
+      <use href="#petal" transform="rotate(270 100 100)"/>
+      <use href="#petal" transform="rotate(315 100 100)"/>
+      <!-- downward triangle (shakti) + bindu -->
+      <path d="M78 84 L122 84 L100 122 Z"/>
+      <circle class="bindu" cx="100" cy="99" r="4"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ============ HOW TO READ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">How to read this catalogue</div>
+      <h2>Every claim carries its warrant</h2>
+      <p class="lede">A charm's <em>catalogue facts</em> and its <em>purported powers</em> are different kinds of statement. This reference keeps them visibly apart, so the tradition is represented faithfully rather than flattened into either scepticism or sales copy. Each entry is tagged by how its claims are known.</p>
+    </div>
+    <div class="legend-grid">
+      <div class="key cat">
+        <h4><span class="dot cat"></span>Catalogue</h4>
+        <p>Recorded fact — a name, material, temple, maker, date, or a listing that exists in the corpus (manuscript metadata, marketplace data, a dated piece). Verifiable.</p>
+      </div>
+      <div class="key trad">
+        <h4><span class="dot trad"></span>Tradition</h4>
+        <p>What practitioners hold to be true — the domain of power a charm carries and the conditions of its use. Reported faithfully as belief, neither endorsed nor debunked.</p>
+      </div>
+      <div class="key inf">
+        <h4><span class="dot inf"></span>Inference</h4>
+        <p>Reasoned context drawn from general knowledge to connect or explain entries. Plausible, but not tied to a specific corpus source — read with that caution.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px; color:var(--ink-soft); font-size:15.5px; max-width:70ch">
+      Domains of power appear as chips on each entry:
+      <span class="chip">Protection</span><span class="chip">Metta / Charm</span><span class="chip">Wealth</span><span class="chip">Healing</span><span class="chip">Authority</span>
+      — the Thai practitioner's own axes (คงกระพัน · เมตตามหานิยม · โชคลาภ · สุขภาพ · อำนาจบารมี), not outside categories imposed on the tradition.
+    </p>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The provenance spine</div>
+      <h2>The seam is time, not authenticity</h2>
+      <p class="lede">There is no line where the "real" tradition ends and the "commercial" one begins. A votive tablet pressed from Hariphunchai clay and a garuda pendant sold today belong to a single, continuous practice of carrying power on the body.</p>
+    </div>
+    <div class="timeline">
+      <div class="era">
+        <div class="when"><b>c. 11th–13th c.</b>Hariphunchai · Lanna roots</div>
+        <div class="body">
+          <h3>Votive clay &amp; the palm-leaf treatise</h3>
+          <p>The oldest surviving northern charms are kiln-fired clay tablets — <span class="th">พระรอด</span> and the Lamphun votive set — pressed as merit and buried in stupas. Alongside them, monks copy <em>yant</em> diagrams and <em>katha</em> onto palm leaf in Khom script. <span class="tag inf">Inference</span> the practice of inscribing sacred syllables predates any single surviving object.</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="when"><b>1860s–1930s</b>The named-monk era</div>
+        <div class="body">
+          <h3>The consecrating masters</h3>
+          <p>Amulets become signed works. Somdej Toh's <span class="th">พระสมเด็จ</span> (1860s) and, in the north, Khruba Srivichai (1878–1939) — the Lanna saint whose followers built the Doi Suthep road in 1935 — attach a charm's power to a specific hand and a specific temple. Provenance becomes value. <span class="tag cat">Catalogue</span></p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="when"><b>2006–2016</b>The craze decades</div>
+        <div class="body">
+          <h3>Mass devotion, mass markets</h3>
+          <p>The <span class="th">จตุคามรามเทพ</span> wealth medallion peaks in 2006–07 — an estimated ฿22 billion trade, ending in a fatal crowd-crush. A decade later, ensouled <span class="th">ลูกเทพ</span> "child-angel" dolls have their own boom and fade. <span class="tag cat">Catalogue</span> The charm becomes a financial and media event.</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="when"><b>Now</b>Mutelu · the phone screen</div>
+        <div class="body">
+          <h3>The listing as living practice</h3>
+          <p>Gen-Z reframes the whole field as <span class="th">มูเตลู</span> (<em>mutelu</em>) — an everyday, unembarrassed engagement with charms, shrines and luck. Sellers state a piece's <span class="th">พุทธคุณ</span> (efficacy) in the listing itself. Chinese <span class="th">ปี่เซียะ</span> and Japanese <span class="th">โอมาโมริ</span> sit beside temple amulets. The market <em>is</em> the tradition, continued. <span class="tag trad">Tradition</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIMEN CATALOGUE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The catalogue · 22 specimens</div>
+      <h2>Named charms &amp; their domains</h2>
+      <p class="lede">Each entry gives the Thai name, a materials-and-origin line, the powers ascribed to it, and — where recorded — the maker and temple. Claim tags mark how each part is known. Fifteen classics first, then the market's own current additions.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="spec">
+        <div class="code">A·01 · northern votive</div>
+        <div class="name"><span class="th">พระรอด</span><span class="rom">Phra Rod</span><span class="en">"The surviving one" · Lamphun</span></div>
+        <div class="meta"><span><b>Era</b> c. 11th c.</span><span><b>Material</b> fired clay</span><span><b>Wat Mahawan</b></span></div>
+        <p class="desc">Among the oldest revered charms of the north; one of Thailand's classic "Benjaphakhi" five. Small enough to close in a fist, carried against harm. <span class="tag trad">Tradition</span> grants invulnerability and safe escape; a controlled antiquity today.</p>
+        <p class="prov">Pressed from Hariphunchai clay, Lamphun.</p>
+        <div class="chips"><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">A·02 · "King of Amulets"</div>
+        <div class="name"><span class="th">พระสมเด็จ</span><span class="rom">Phra Somdej</span><span class="en">Somdej Toh · Bangkok</span></div>
+        <div class="meta"><span><b>Era</b> 1860s</span><span><b>Material</b> lime paste</span><span><b>Wat Rakhang</b></span></div>
+        <p class="desc">The most emulated of all Thai amulets, tied to the venerated monk Somdej Toh. <span class="tag trad">Tradition</span> an all-round charm — protection, health, relationships, standing. <span class="tag cat">Catalogue</span> genuine early pieces are among the most valuable objects in the trade.</p>
+        <p class="prov">Attributed to Somdej Phra Buddhacharn Toh.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Wealth</span><span class="chip">Metta / Charm</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">A·03 · the walking saint</div>
+        <div class="name"><span class="th">หลวงปู่ทวด</span><span class="rom">Luang Pu Thuat</span><span class="en">the monk who walked on water</span></div>
+        <div class="meta"><span><b>Era</b> figure c. 16th c.</span><span><b>Form</b> medallion</span><span><b>South</b></span></div>
+        <p class="desc">Cast in the monk's seated likeness. <span class="tag trad">Tradition</span> the bearer cannot die a violent or untimely death — which is why the medallion rides on car dashboards across the country as accident protection.</p>
+        <p class="prov">Popularised through Wat Chang Hai lineage pieces.</p>
+        <div class="chips"><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">A·04 · the folk-epic lover</div>
+        <div class="name"><span class="th">ขุนแผน</span><span class="rom">Khun Paen</span><span class="en">charm of the irresistible warrior</span></div>
+        <div class="meta"><span><b>Source</b> Ayutthaya epic</span><span><b>Form</b> moulded tablet</span></div>
+        <p class="desc">Named for the epic hero famed for charisma and conquest in love and war. <span class="tag trad">Tradition</span> a charm of <em>saneh</em> — attraction, persuasion, magnetism — often carrying a <em>Plai Kuman</em> guardian spirit. <span class="tag cat">Catalogue</span> notable line: Luang Pho Guay of Wat Khositaram, Chainat.</p>
+        <p class="prov">ขุนแผนพลายกุมาร · Luang Pho Guay, Wat Khositaram.</p>
+        <div class="chips"><span class="chip">Metta / Charm</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">A·05 · the ฿22bn craze</div>
+        <div class="name"><span class="th">จตุคามรามเทพ</span><span class="rom">Jatukham Rammathep</span><span class="en">the wealth guardian</span></div>
+        <div class="meta"><span><b>Era</b> peak 2006–07</span><span><b>Form</b> large medallion</span><span><b>Nakhon Si Thammarat</b></span></div>
+        <p class="desc">A guardian-deity medallion whose boom made it a national wealth phenomenon. <span class="tag cat">Catalogue</span> an estimated ฿22 billion trade at its height, and a fatal stampede at a temple release; the market has since cooled. <span class="tag trad">Tradition</span> draws fortune and shields business.</p>
+        <p class="prov">Wat Phra Mahathat lineage, southern Thailand.</p>
+        <div class="chips"><span class="chip">Wealth</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">B·06 · the rolled scroll</div>
+        <div class="name"><span class="th">ตะกรุด</span><span class="rom">Takrut</span><span class="en">metal yantra scroll</span></div>
+        <div class="meta"><span><b>Form</b> rolled foil</span><span><b>Material</b> tin · copper · gold</span></div>
+        <p class="desc">A thin metal sheet inscribed with a <em>yant</em> in Khom letters by the maker's hand, then rolled tight and worn on a waist-cord or chain. <span class="tag trad">Tradition</span> protection and luck, concealable under clothing. <span class="tag cat">Catalogue</span> renowned line: Luang Pho Doem, Wat Nong Pho.</p>
+        <p class="prov">ตะกรุด · Luang Pho Doem, Wat Nong Pho.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Wealth</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">B·07 · the waist charm</div>
+        <div class="name"><span class="th">ปลัดขิก</span><span class="rom">Palad Khik</span><span class="en">the "honourable surrogate"</span></div>
+        <div class="meta"><span><b>Form</b> phallic pendant</span><span><b>Material</b> wood · metal · bone</span></div>
+        <p class="desc">A small phallic talisman worn low on a cord. <span class="tag trad">Tradition</span> wards harm and draws luck in gambling, love and trade; historically given to boys as bodily protection. <span class="tag inf">Inference</span> among the oldest strata of Thai folk apotropaics, pre-Buddhist in root.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Wealth</span><span class="chip">Metta / Charm</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">C·08 · the golden child</div>
+        <div class="name"><span class="th">กุมารทอง</span><span class="rom">Kuman Thong</span><span class="en">the golden boy-spirit</span></div>
+        <div class="meta"><span><b>Form</b> child statuette</span><span><b>Care</b> fed rice · milk · toys</span></div>
+        <p class="desc">An adopted child-spirit kept in the home or shop. <span class="tag trad">Tradition</span> the household feeds and names him; in return he guards the premises and draws wealth. <span class="tag cat">Catalogue</span> among the most-attested living-belief entities; sold in the market as a portable pocket form too.</p>
+        <p class="prov">Related guardian: <span class="th">ลูกอมพรายกุมาร</span>, Luang Pu Tim, Wat Lahan Rai.</p>
+        <div class="chips"><span class="chip">Wealth</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">C·09 · the beckoning lady</div>
+        <div class="name"><span class="th">นางกวัก</span><span class="rom">Nang Kwak</span><span class="en">she who waves the money in</span></div>
+        <div class="meta"><span><b>Form</b> seated figure in red</span><span><b>Place</b> shop tills</span></div>
+        <p class="desc">A kneeling woman with one hand raised in the Thai beckoning gesture, kept at the counter. <span class="tag trad">Tradition</span> she waves customers and their money into the shop — the patron charm of the trader.</p>
+        <div class="chips"><span class="chip">Wealth</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">C·10 · the silver tongue</div>
+        <div class="name"><span class="th">สาลิกาลิ้นทอง</span><span class="rom">Salika Lin Thong</span><span class="en">golden-tongued myna</span></div>
+        <div class="meta"><span><b>Form</b> bird amulet</span><span><b>Material</b> metal · often oiled</span></div>
+        <p class="desc">A myna-bird charm, sometimes with a golden tongue. <span class="tag trad">Tradition</span> confers <em>metta</em> and persuasive, "silver-tongued" speech — favoured by traders, negotiators and anyone whose living turns on being believed.</p>
+        <div class="chips"><span class="chip">Metta / Charm</span><span class="chip">Wealth</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">D·11 · the medicine buddha</div>
+        <div class="name"><span class="th">พระกริ่ง</span><span class="rom">Phra Kring</span><span class="en">the ringing buddha</span></div>
+        <div class="meta"><span><b>Form</b> cast bronze figure</span><span><b>Deity</b> Bhaisajyaguru</span></div>
+        <p class="desc">A small bronze Medicine Buddha with a tiny ball sealed inside that rings when shaken. <span class="tag trad">Tradition</span> prized for healing and vitality; the ring is used in blessing water. <span class="tag inf">Inference</span> the Bhaisajyaguru dedication ties it to the Mahayana healing cult absorbed into Thai practice.</p>
+        <div class="chips"><span class="chip">Healing</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">D·12 · the Lanna saint</div>
+        <div class="name"><span class="th">ครูบาศรีวิชัย</span><span class="rom">Khruba Srivichai</span><span class="en">the northern merit-maker</span></div>
+        <div class="meta"><span><b>Life</b> 1878–1939</span><span><b>Form</b> medallion</span><span><b>Doi Suthep</b></span></div>
+        <p class="desc">The Lanna monk-saint whose devotees built the road up Doi Suthep in 1935. <span class="tag cat">Catalogue</span> a documented historical figure; his medallions are the north's own protective and merit-bearing charm. <span class="tag trad">Tradition</span> carries his <em>barami</em> — accumulated spiritual authority.</p>
+        <p class="prov">Chiang Mai / Doi Suthep lineage.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Authority</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">E·13 · the ink on skin</div>
+        <div class="name"><span class="th">สักยันต์</span><span class="rom">Sak Yant</span><span class="en">the sacred hand-poked tattoo</span></div>
+        <div class="meta"><span><b>Form</b> tattooed yantra</span><span><b>Tool</b> khem sak needle</span></div>
+        <p class="desc">A <em>yant</em> and its <em>katha</em> poked into the skin by a master. <span class="tag trad">Tradition</span> confers protection, charisma or luck — <em>conditional</em> on the bearer keeping precepts and food taboos; break the vow and the power lapses. The charm you cannot take off.</p>
+        <p class="prov">Lineage temple: Wat Bang Phra, among others.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Metta / Charm</span><span class="chip">Authority</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">E·14 · the king of birds</div>
+        <div class="name"><span class="th">พญาครุฑ</span><span class="rom">Phaya Khrut</span><span class="en">Garuda, mount of Vishnu</span></div>
+        <div class="meta"><span><b>Form</b> pendant · figure</span><span><b>Material</b> metal · ivory-nut wood</span></div>
+        <p class="desc">The garuda, emblem of sovereignty. <span class="tag trad">Tradition</span> confers authority and commanding presence, speeds commerce, and — repeatedly stated in listings — <span class="th">กันคุณไสย</span>, wards off black magic and curses. <span class="tag cat">Catalogue</span> one of the highest-frequency motifs in today's market.</p>
+        <p class="prov">e.g. พญาครุฑ, Luang Pho Wan lineage pieces.</p>
+        <div class="chips"><span class="chip">Authority</span><span class="chip">Wealth</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">E·15 · the counter-charm</div>
+        <div class="name"><span class="th">เบี้ยแก้</span><span class="rom">Bia Kae</span><span class="en">the sealed cowrie</span></div>
+        <div class="meta"><span><b>Form</b> cowrie shell, filled &amp; bound</span></div>
+        <p class="desc">A cowrie packed with mercury, sealed and lacquer-bound. <span class="tag trad">Tradition</span> a defensive charm specifically against <em>black magic</em> — it "undoes" curses and hostile spells rather than simply blocking harm. <span class="tag cat">Catalogue</span> the treatise's own recipe is ascribed to Luang Pu Bun of Wat Klang Bang Kaew — see the formulary below.</p>
+        <p class="prov">เบี้ยแก้ · after Luang Pu Bun, Wat Klang Bang Kaew.</p>
+        <div class="chips"><span class="chip">Protection</span></div>
+      </article>
+
+    </div>
+
+    <div class="sect-head" style="margin-top:44px">
+      <div class="eyebrow">The current wave · evidenced from 4,778 live listings</div>
+      <h2>What the market adds</h2>
+      <p class="lede">Seven more varieties, each a different <em>kind</em> of thing to carry — a viral modern deity, a guardian giant, a natural anomaly, a monk's own bodily relic, a topical potion, a living plant. Not appended for volume: each is drawn straight from what the market actually stocks and what its own listings claim, so the catalogue's shape matches the tradition's present shape, not just its past.</p>
+    </div>
+    <div class="cat-grid">
+
+      <article class="spec">
+        <div class="code">F·16 · the phenomenon of the decade</div>
+        <div class="name"><span class="th">ไอ้ไข่</span><span class="rom">Ai Khai</span><span class="en">the boy-spirit of Wat Chedi</span></div>
+        <div class="meta"><span><b>Form</b> boy statuette, 26–28cm common</span><span><b>Wat Chedi</b>, Sichon, Nakhon Si Thammarat</span></div>
+        <p class="desc">A child-spirit tied to one specific temple, exploded from local legend into the country's dominant amulet craze of the 2020s — arguably the biggest since Jatukham. <span class="tag trad">Tradition</span> grants sudden windfall; listings state it flatly — <span class="th">บูชาแล้วถูกหวย</span>, "worship it and win the lottery." <span class="tag cat">Catalogue</span> 80+ live listings, ฿9–1,299, sold with its own yantra cloth and incense.</p>
+        <p class="prov">Wat Chedi, Amphoe Sichon.</p>
+        <div class="chips"><span class="chip">Wealth</span><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·17 · the guardian giant</div>
+        <div class="name"><span class="th">ท้าวเวสสุวรรณ</span><span class="rom">Thao Wessuwan</span><span class="en">king of the yakshas</span></div>
+        <div class="meta"><span><b>Form</b> statue (up to life-size) → pendant</span><span><b>Material</b> resin · bronze · silver</span></div>
+        <p class="desc">One of the Four Great Kings, guardian of the north and lord over the yaksha spirits. <span class="tag trad">Tradition</span> a household ward — set at the gate or door to keep hostile spirits and black magic from crossing the threshold, the same duty scaled from garden-statue to worn pendant. <span class="tag cat">Catalogue</span> among the fastest-growing categories in current listings.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Authority</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·18 · the steady shell</div>
+        <div class="name"><span class="th">พญาเต่าเรือน</span><span class="rom">Phaya Tao Ruean</span><span class="en">lord armoured-turtle</span></div>
+        <div class="meta"><span><b>Form</b> cast figure · coin medallion</span><span><b>Wat Sai Thong Phatthana</b></span></div>
+        <p class="desc">A turtle rendered in the same cast-bronze tradition as the Buddha-figure amulets. <span class="tag trad">Tradition</span> the turtle's slow, armoured persistence stands for wealth that accumulates and does not stop — one listing names its own edition <span class="th">รวยไม่หยุด</span>, "rich without stopping." <span class="tag cat">Catalogue</span> the strongest lineage is Luang Pu Liu; older pieces also trace to Luang Pho Ngoen of Wat Bang Khlan.</p>
+        <p class="prov">Luang Pu Liu, Wat Sai Thong Phatthana.</p>
+        <div class="chips"><span class="chip">Wealth</span><span class="chip">Healing</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·19 · the natural anomaly</div>
+        <div class="name"><span class="th">กะลาตาเดียว</span><span class="rom">Kala Ta Diao</span><span class="en">the one-eyed coconut shell</span></div>
+        <div class="meta"><span><b>Form</b> ring · pendant, uncarved</span><span><b>Wat Sisa Thong</b>, Nakhon Pathom</span></div>
+        <p class="desc">A coconut naturally grows three "eyes"; one in perhaps a million grows with only one. Nothing is carved — the charm <em>is</em> the anomaly, merely consecrated. <span class="tag trad">Tradition</span> extreme rarity is read as a sign the object was already marked for protection before any monk touched it. <span class="tag cat">Catalogue</span> the most-attested of the market's newer terms — 177 live listings, ฿19–1,500.</p>
+        <p class="prov">Luang Pho Noi, Wat Sisa Thong.</p>
+        <div class="chips"><span class="chip">Protection</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·20 · the bodily relic</div>
+        <div class="name"><span class="th">ชานหมาก</span><span class="rom">Chan Mak</span><span class="en">a monk's own chewed betel</span></div>
+        <div class="meta"><span><b>Form</b> preserved quid, sometimes lacquered</span></div>
+        <p class="desc">Not made <em>for</em> the wearer at all — a revered monk's own chewed betel-nut quid, kept rather than discarded. Closer to a saint's relic than a manufactured charm: the power is his own body's residue, not an inscription. <span class="tag trad">Tradition</span> carries the monk's own <em>barami</em> directly, undiluted by any maker's craft. <span class="tag cat">Catalogue</span> by far the highest average price of any market category surveyed — ฿30–15,500, avg ฿785 — pieces from named masters (Luang Pu See, Luang Pho Thob) command the top of that range.</p>
+        <div class="chips"><span class="chip">Protection</span><span class="chip">Metta / Charm</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·21 · the topical charm</div>
+        <div class="name"><span class="th">น้ำมันพราย</span><span class="rom">Nam Man Phrai</span><span class="en">ghost-oil, worn on the skin</span></div>
+        <div class="meta"><span><b>Form</b> liquid, dabbed not carried</span></div>
+        <p class="desc">An oil rendered with matter linked to a bound <em>phrai</em> spirit — the same practice-family as the Kuman Thong — worn on the skin rather than the body. <span class="tag trad">Tradition</span> pure <em>saneh</em> — irresistibility; listings do not hedge — one claims "used by 500 wives and husbands," another "a hundred lovers in seven nights." <span class="tag cat">Catalogue</span> the treatise's own <span class="th">น้ำมันเสน่ห์</span> formulas (see the formulary above) are this same object's documented recipe.</p>
+        <div class="chips"><span class="chip">Metta / Charm</span></div>
+      </article>
+
+      <article class="spec">
+        <div class="code">F·22 · the living charge</div>
+        <div class="name"><span class="th">ว่าน</span><span class="rom">Waan</span><span class="en">a charged tuber or plant</span></div>
+        <div class="meta"><span><b>Form</b> living plant · dried root · ground powder</span></div>
+        <p class="desc">Not an object at all but a category of <em>plant</em> — certain tubers (e.g. <span class="th">ว่านดอกทอง</span>, "golden-flower waan") are grown and kept for an innate charge, then used raw, steeped into oil, or ground into a charm's filling. The one variety here that is never finished — it is alive, and tended like a familiar. <span class="tag trad">Tradition</span> draws affection and luck; <span class="tag cat">Catalogue</span> sold both as a live potted plant and as the named ingredient inside other charms (love-wax, oils, Kuman Thong lockets).</p>
+        <div class="chips"><span class="chip">Metta / Charm</span><span class="chip">Wealth</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARKET TAXONOMY ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The full range · mined from 4,778 live listings</div>
+      <h2>Hundreds of kinds, not a handful</h2>
+      <p class="lede">The specimen catalogue above is a reader's selection — real breadth needed a real count. This taxonomy comes from screening the market's own listing text against a broad lexicon of known Thai amulet terms, not a small curated seed-list: <b>112 distinct varieties</b> survived the check, after discarding substring false-positives (Thai has no word-spacing, so short terms like "crab" or "bird" collide with unrelated words) and non-amulet noise (Halloween decor, fishing lures) that a blind keyword count would have swept in. <span class="tag cat">Catalogue.</span> <code>n</code> is listing-hits within the term; a title can carry more than one term.</p>
+    </div>
+    <div class="mtax-cat">
+  <h4>Classic Buddha-image amulets (Benjaphakhi &amp; kin) <span class="n">· 19</span></h4>
+  <p class="catnote">phra khrueang — cast or moulded Buddha figures, the tradition's oldest and most conservative wing.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">พระสมเด็จ</span><span class="gloss">Phra Somdej — the classic votive block</span><span class="mstat">n=154 · ฿19–1900</span></div>
+    <div class="mrow"><span class="th">พระปิดตา</span><span class="gloss">Phra Pidta — closed-eyes concealment Buddha</span><span class="mstat">n=53 · ฿29–1999</span></div>
+    <div class="mrow"><span class="th">พระขุนแผน</span><span class="gloss">Phra Khun Paen — charisma/attraction charm</span><span class="mstat">n=31 · ฿30–1599</span></div>
+    <div class="mrow"><span class="th">หลวงพ่อโสธร</span><span class="gloss">Luang Pho Sothon (revered Chachoengsao image)</span><span class="mstat">n=30 · ฿12–299</span></div>
+    <div class="mrow"><span class="th">พระบูชา</span><span class="gloss">Phra Bucha — home-altar Buddha image</span><span class="mstat">n=22 · ฿19–198</span></div>
+    <div class="mrow"><span class="th">พระรอด</span><span class="gloss">Phra Rod — the Lamphun votive</span><span class="mstat">n=13 · ฿49–300</span></div>
+    <div class="mrow"><span class="th">พระกริ่ง</span><span class="gloss">Phra Kring — the ringing Medicine-Buddha</span><span class="mstat">n=11 · ฿30–399</span></div>
+    <div class="mrow"><span class="th">พระประธาน</span><span class="gloss">Phra Prathan — principal shrine Buddha</span><span class="mstat">n=11 · ฿90–299</span></div>
+    <div class="mrow"><span class="th">พระร่วง</span><span class="gloss">Phra Ruang — Sukhothai-lineage figure</span><span class="mstat">n=7 · ฿39–890</span></div>
+    <div class="mrow"><span class="th">พระสังกัจจายน์</span><span class="gloss">Phra Sangkajai — the plump abundance-monk</span><span class="mstat">n=7 · ฿39–1399</span></div>
+    <div class="mrow"><span class="th">พระสิวลี</span><span class="gloss">Phra Sivali — the alms-gaining saint</span><span class="mstat">n=7 · ฿19–249</span></div>
+    <div class="mrow"><span class="th">พระผงสุพรรณ</span><span class="gloss">Phra Phong Suphan — Suphanburi powder votive</span><span class="mstat">n=6 · ฿59–299</span></div>
+    <div class="mrow"><span class="th">พระนางพญา</span><span class="gloss">Phra Nang Phaya — the 'queen' votive</span><span class="mstat">n=6 · ฿9–399</span></div>
+    <div class="mrow"><span class="th">พระแก้วมรกต</span><span class="gloss">Emerald Buddha replica</span><span class="mstat">n=6 · ฿39–360</span></div>
+    <div class="mrow"><span class="th">พระซุ้มกอ</span><span class="gloss">Phra Sum Kor — Kamphaeng Phet arch-votive</span><span class="mstat">n=2 · ฿500–999</span></div>
+    <div class="mrow"><span class="th">พระกำแพงซุ้มกอ</span><span class="gloss">Kamphaeng Phet arch-votive (full name)</span><span class="mstat">n=2 · ฿109–500</span></div>
+    <div class="mrow"><span class="th">พระเนื้อดิน</span><span class="gloss">clay-bodied votive</span><span class="mstat">n=1 · ฿129–129</span></div>
+    <div class="mrow"><span class="th">พระเนื้อผง</span><span class="gloss">powder-bodied votive</span><span class="mstat">n=1 · ฿99–99</span></div>
+    <div class="mrow"><span class="th">พระเชียงแสน</span><span class="gloss">Chiang Saen-style image</span><span class="mstat">n=1 · ฿280–280</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Monk medallions &amp; coins <span class="n">· 7</span></h4>
+  <p class="catnote">เหรียญ (rian) — a monk's face stamped or cast onto a coin, the single most prolific market form.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">เหรียญพญาเต่าเรือน</span><span class="gloss">turtle-lord medallion</span><span class="mstat">n=31 · ฿49–465</span></div>
+    <div class="mrow"><span class="th">เหรียญหลวงปู่</span><span class="gloss">a named-monk ("Luang Pu") medallion</span><span class="mstat">n=27 · ฿20–299</span></div>
+    <div class="mrow"><span class="th">เหรียญหลวงพ่อ</span><span class="gloss">a named-monk ("Luang Pho") medallion</span><span class="mstat">n=22 · ฿19–1000</span></div>
+    <div class="mrow"><span class="th">เหรียญหล่อ</span><span class="gloss">cast (not stamped) medallion</span><span class="mstat">n=5 · ฿39–159</span></div>
+    <div class="mrow"><span class="th">เหรียญที่ระลึก</span><span class="gloss">commemorative medallion</span><span class="mstat">n=3 · ฿64–129</span></div>
+    <div class="mrow"><span class="th">เหรียญเสือ</span><span class="gloss">tiger medallion</span><span class="mstat">n=3 · ฿88–109</span></div>
+    <div class="mrow"><span class="th">เหรียญรุ่น</span><span class="gloss">a named production "run" medallion</span><span class="mstat">n=2 · ฿69–279</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Deities, guardians &amp; mythical figures <span class="n">· 20</span></h4>
+  <p class="catnote">non-Buddha figures — Hindu-Brahmanic gods, guardian spirits, and folk deities absorbed wholesale into the practice.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">ท้าวเวสสุวรรณ</span><span class="gloss">Thao Wessuwan — guardian yaksha king</span><span class="mstat">n=135 · ฿6–1450</span></div>
+    <div class="mrow"><span class="th">กุมารทอง</span><span class="gloss">Kuman Thong — golden child-spirit</span><span class="mstat">n=99 · ฿20–1595</span></div>
+    <div class="mrow"><span class="th">ไอ้ไข่</span><span class="gloss">Ai Khai — the Wat Chedi boy-spirit</span><span class="mstat">n=98 · ฿9–1299</span></div>
+    <div class="mrow"><span class="th">นางกวัก</span><span class="gloss">Nang Kwak — the beckoning lady</span><span class="mstat">n=93 · ฿19–2500</span></div>
+    <div class="mrow"><span class="th">หนุมาน</span><span class="gloss">Hanuman</span><span class="mstat">n=87 · ฿6–1000</span></div>
+    <div class="mrow"><span class="th">ครุฑ</span><span class="gloss">Garuda</span><span class="mstat">n=68 · ฿6–399</span></div>
+    <div class="mrow"><span class="th">พระราหู</span><span class="gloss">Phra Rahu — the eclipse deity</span><span class="mstat">n=67 · ฿10–2122</span></div>
+    <div class="mrow"><span class="th">พระพิฆเนศ</span><span class="gloss">Ganesh</span><span class="mstat">n=32 · ฿12–390</span></div>
+    <div class="mrow"><span class="th">พญานาค</span><span class="gloss">the Naga serpent-king</span><span class="mstat">n=15 · ฿29–487</span></div>
+    <div class="mrow"><span class="th">ฤๅษี</span><span class="gloss">lersi / ruesi hermit-sage</span><span class="mstat">n=15 · ฿39–260</span></div>
+    <div class="mrow"><span class="th">พระพรหม</span><span class="gloss">Brahma (four-faced)</span><span class="mstat">n=10 · ฿69–150</span></div>
+    <div class="mrow"><span class="th">ตาไข่</span><span class="gloss">a votive rooster offered to Ai Khai</span><span class="mstat">n=9 · ฿23–195</span></div>
+    <div class="mrow"><span class="th">พระศิวะ</span><span class="gloss">Shiva</span><span class="mstat">n=8 · ฿59–129</span></div>
+    <div class="mrow"><span class="th">พระนารายณ์</span><span class="gloss">Narayana / Vishnu</span><span class="mstat">n=5 · ฿49–380</span></div>
+    <div class="mrow"><span class="th">พระแม่อุมา</span><span class="gloss">Uma</span><span class="mstat">n=3 · ฿59–129</span></div>
+    <div class="mrow"><span class="th">พระสยามเทวาธิราช</span><span class="gloss">the guardian deity of Siam</span><span class="mstat">n=2 · ฿39–69</span></div>
+    <div class="mrow"><span class="th">พระอินทร์</span><span class="gloss">Indra</span><span class="mstat">n=1 · ฿39–39</span></div>
+    <div class="mrow"><span class="th">เจ้าแม่กวนอิม</span><span class="gloss">Guanyin</span><span class="mstat">n=1 · ฿49–49</span></div>
+    <div class="mrow"><span class="th">ท้าวมหาพรหม</span><span class="gloss">the Erawan four-faced Brahma</span><span class="mstat">n=1 · ฿49–49</span></div>
+    <div class="mrow"><span class="th">พ่อปู่</span><span class="gloss">a grandfather-spirit guardian</span><span class="mstat">n=1 · ฿150–150</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Wearable forms <span class="n">· 12</span></h4>
+  <p class="catnote">not what the charm IS, but how it's carried — the mounting/form layer that sits under everything above.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">จี้</span><span class="gloss">pendant mount (any figure)</span><span class="mstat">n=460 · ฿7–1478</span></div>
+    <div class="mrow"><span class="th">ตะกรุด</span><span class="gloss">rolled metal yantra scroll</span><span class="mstat">n=172 · ฿19–1599</span></div>
+    <div class="mrow"><span class="th">ผ้ายันต์</span><span class="gloss">printed yantra cloth</span><span class="mstat">n=138 · ฿5–1500</span></div>
+    <div class="mrow"><span class="th">สร้อยคอ</span><span class="gloss">neck chain (mounting)</span><span class="mstat">n=131 · ฿8–617</span></div>
+    <div class="mrow"><span class="th">กำไล</span><span class="gloss">bangle / bracelet form</span><span class="mstat">n=96 · ฿8–1490</span></div>
+    <div class="mrow"><span class="th">สร้อยข้อมือ</span><span class="gloss">wrist string (mounting)</span><span class="mstat">n=90 · ฿1–1130</span></div>
+    <div class="mrow"><span class="th">ปลัดขิก</span><span class="gloss">Palad Khik — phallic waist charm</span><span class="mstat">n=86 · ฿29–650</span></div>
+    <div class="mrow"><span class="th">ล็อกเก็ต</span><span class="gloss">photo-locket amulet</span><span class="mstat">n=61 · ฿19–890</span></div>
+    <div class="mrow"><span class="th">แหวน</span><span class="gloss">ring form</span><span class="mstat">n=35 · ฿8–900</span></div>
+    <div class="mrow"><span class="th">พวงกุญแจ</span><span class="gloss">keychain-mounted charm</span><span class="mstat">n=35 · ฿7–429</span></div>
+    <div class="mrow"><span class="th">ด้ายแดง</span><span class="gloss">red-thread wrist tie</span><span class="mstat">n=12 · ฿10–89</span></div>
+    <div class="mrow"><span class="th">สายสิญจน์</span><span class="gloss">sacred white cotton thread</span><span class="mstat">n=8 · ฿19–290</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Animal &amp; creature charms <span class="n">· 9</span></h4>
+  <p class="catnote">a creature's own nature lent to the wearer — verified after screening out unrelated Halloween-decor and fishing-lure noise.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">เสือ</span><span class="gloss">tiger charms (fang, hide, cast figure)</span><span class="mstat">n=121 · ฿10–1490</span></div>
+    <div class="mrow"><span class="th">เต่า</span><span class="gloss">turtle charms</span><span class="mstat">n=84 · ฿3–1200</span></div>
+    <div class="mrow"><span class="th">ปี่เซียะ</span><span class="gloss">Pixiu (imported Chinese wealth-beast)</span><span class="mstat">n=22 · ฿8–658</span></div>
+    <div class="mrow"><span class="th">งู</span><span class="gloss">snake charms &amp; plants</span><span class="mstat">n=10 · ฿11–211</span></div>
+    <div class="mrow"><span class="th">สิงห์</span><span class="gloss">singha lion</span><span class="mstat">n=10 · ฿35–1500</span></div>
+    <div class="mrow"><span class="th">จระเข้</span><span class="gloss">crocodile amulet (see formulary)</span><span class="mstat">n=4 · ฿49–249</span></div>
+    <div class="mrow"><span class="th">ปลาตะเพียน</span><span class="gloss">golden/silver carp charm</span><span class="mstat">n=2 · ฿169–320</span></div>
+    <div class="mrow"><span class="th">ตุ๊กแก</span><span class="gloss">gecko charm (calls luck/love)</span><span class="mstat">n=2 · ฿26–99</span></div>
+    <div class="mrow"><span class="th">แมงป่อง</span><span class="gloss">scorpion palad khik (niche)</span><span class="mstat">n=2 · ฿26–80</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Potions, oils &amp; unguents <span class="n">· 10</span></h4>
+  <p class="catnote">charms you apply rather than carry — dabbed, drunk, or worn as scent.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">สีผึ้ง</span><span class="gloss">love-beeswax salve</span><span class="mstat">n=130 · ฿8–1500</span></div>
+    <div class="mrow"><span class="th">น้ำมันจันทร์</span><span class="gloss">sandalwood oil</span><span class="mstat">n=49 · ฿6–799</span></div>
+    <div class="mrow"><span class="th">น้ำมนต์</span><span class="gloss">holy/blessed water</span><span class="mstat">n=33 · ฿10–2499</span></div>
+    <div class="mrow"><span class="th">น้ำมันพราย</span><span class="gloss">phrai ghost-oil (topical)</span><span class="mstat">n=22 · ฿39–1099</span></div>
+    <div class="mrow"><span class="th">สีผึ้งเสน่ห์</span><span class="gloss">charm-beeswax (attraction)</span><span class="mstat">n=19 · ฿99–850</span></div>
+    <div class="mrow"><span class="th">น้ำมันมนต์</span><span class="gloss">consecrated oil</span><span class="mstat">n=11 · ฿69–1499</span></div>
+    <div class="mrow"><span class="th">น้ำมันเสน่ห์</span><span class="gloss">love-oil</span><span class="mstat">n=8 · ฿59–789</span></div>
+    <div class="mrow"><span class="th">สีผึ้งมหาเสน่ห์</span><span class="gloss">"great-charm" beeswax</span><span class="mstat">n=4 · ฿59–490</span></div>
+    <div class="mrow"><span class="th">ยาหม่อง</span><span class="gloss">medicated balm (temple-brand)</span><span class="mstat">n=3 · ฿90–349</span></div>
+    <div class="mrow"><span class="th">น้ำอบ</span><span class="gloss">scented holy perfume-water</span><span class="mstat">n=2 · ฿30–399</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Plants, herbs &amp; tubers (ว่าน) <span class="n">· 10</span></h4>
+  <p class="catnote">the living-charge family (see specimen F·22) — dozens of named tuber cultivars, each a distinct claimed effect.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">ว่านดอกทอง</span><span class="gloss">golden-flower waan — attraction tuber</span><span class="mstat">n=25 · ฿39–1190</span></div>
+    <div class="mrow"><span class="th">ว่านเสน่ห์</span><span class="gloss">a charm-tuber (generic)</span><span class="mstat">n=20 · ฿25–1190</span></div>
+    <div class="mrow"><span class="th">ว่านมหาเสน่ห์</span><span class="gloss">"great-charm" tuber</span><span class="mstat">n=19 · ฿29–1190</span></div>
+    <div class="mrow"><span class="th">ว่านเพชรกลับ</span><span class="gloss">"reversing diamond" tuber (deflects harm)</span><span class="mstat">n=4 · ฿49–199</span></div>
+    <div class="mrow"><span class="th">ว่านไก่แดง</span><span class="gloss">"red rooster" tuber</span><span class="mstat">n=3 · ฿69–359</span></div>
+    <div class="mrow"><span class="th">ว่านสาวหลง</span><span class="gloss">"girl-enchanted" tuber</span><span class="mstat">n=3 · ฿75–199</span></div>
+    <div class="mrow"><span class="th">ว่านม้าฮ้อ</span><span class="gloss">"galloping horse" tuber</span><span class="mstat">n=2 · ฿59–139</span></div>
+    <div class="mrow"><span class="th">ว่านทรหด</span><span class="gloss">"endurance" tuber (resilience)</span><span class="mstat">n=1 · ฿40–40</span></div>
+    <div class="mrow"><span class="th">ว่านกำบัง</span><span class="gloss">"concealing" tuber (evasion)</span><span class="mstat">n=1 · ฿69–69</span></div>
+    <div class="mrow"><span class="th">ว่านมหาลาภ</span><span class="gloss">"great fortune" tuber</span><span class="mstat">n=1 · ฿59–59</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Bodily / organic relics <span class="n">· 6</span></h4>
+  <p class="catnote">power carried in literal bodily or material residue rather than an inscribed object.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">มวลสาร</span><span class="gloss">sacred filler-material (advertised ingredient)</span><span class="mstat">n=100 · ฿19–990</span></div>
+    <div class="mrow"><span class="th">ผงพุทธคุณ</span><span class="gloss">sacred powder</span><span class="mstat">n=84 · ฿19–4999</span></div>
+    <div class="mrow"><span class="th">ชานหมาก</span><span class="gloss">a monk's chewed-betel relic</span><span class="mstat">n=79 · ฿60–15500</span></div>
+    <div class="mrow"><span class="th">จีวร</span><span class="gloss">a scrap of monk's robe-cloth</span><span class="mstat">n=20 · ฿85–4999</span></div>
+    <div class="mrow"><span class="th">เกศา</span><span class="gloss">a monk's own hair</span><span class="mstat">n=10 · ฿149–4999</span></div>
+    <div class="mrow"><span class="th">ผงเกสร</span><span class="gloss">pollen/flower-powder blend</span><span class="mstat">n=3 · ฿69–69</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Ritual tools &amp; instruments <span class="n">· 4</span></h4>
+  <p class="catnote">objects a practitioner wields, not wears.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">ผ้ายันต์</span><span class="gloss">printed yantra cloth</span><span class="mstat">n=138 · ฿5–1500</span></div>
+    <div class="mrow"><span class="th">มีดหมอ</span><span class="gloss">ritual exorcist's knife (see formulary)</span><span class="mstat">n=80 · ฿29–13500</span></div>
+    <div class="mrow"><span class="th">ไม้เท้า</span><span class="gloss">ritual staff (see formulary)</span><span class="mstat">n=2 · ฿49–89</span></div>
+    <div class="mrow"><span class="th">คทา</span><span class="gloss">ceremonial mace/sceptre</span><span class="mstat">n=2 · ฿500–569</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Household &amp; shop-luck charms <span class="n">· 5</span></h4>
+  <p class="catnote">kept in a fixed place — till, shelf, doorway — rather than on the body.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">นางกวัก</span><span class="gloss">Nang Kwak — the beckoning lady</span><span class="mstat">n=93 · ฿19–2500</span></div>
+    <div class="mrow"><span class="th">ปี่เซียะ</span><span class="gloss">Pixiu (imported Chinese wealth-beast)</span><span class="mstat">n=22 · ฿8–658</span></div>
+    <div class="mrow"><span class="th">กระปุกออมสิน</span><span class="gloss">folk-figure piggy bank</span><span class="mstat">n=2 · ฿228–279</span></div>
+    <div class="mrow"><span class="th">คางคก</span><span class="gloss">toad figure (wealth)</span><span class="mstat">n=1 · ฿69–69</span></div>
+    <div class="mrow"><span class="th">ต้นไม้เงินทอง</span><span class="gloss">"money tree" ornament</span><span class="mstat">n=1 · ฿45–45</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Zodiac, birthday &amp; fortune items <span class="n">· 7</span></h4>
+  <p class="catnote">calendar-driven charms, bought against a specific date or clashing year.</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">พระประจำวันเกิด</span><span class="gloss">birth-day Buddha (7 postures)</span><span class="mstat">n=40 · ฿35–550</span></div>
+    <div class="mrow"><span class="th">ปีชง</span><span class="gloss">a clashing zodiac year</span><span class="mstat">n=28 · ฿6–658</span></div>
+    <div class="mrow"><span class="th">แก้ปีชง</span><span class="gloss">a zodiac-clash remedy charm</span><span class="mstat">n=24 · ฿6–658</span></div>
+    <div class="mrow"><span class="th">ดวงชะตา</span><span class="gloss">a personal horoscope reading/object</span><span class="mstat">n=16 · ฿10–350</span></div>
+    <div class="mrow"><span class="th">สีประจำวันเกิด</span><span class="gloss">birth-day colour</span><span class="mstat">n=9 · ฿39–230</span></div>
+    <div class="mrow"><span class="th">ราศี</span><span class="gloss">zodiac sign</span><span class="mstat">n=8 · ฿7–120</span></div>
+    <div class="mrow"><span class="th">เหรียญ 12 นักษัตร</span><span class="gloss">12-animal zodiac medallion</span><span class="mstat">n=1 · ฿65–65</span></div>
+  </div>
+</div>
+
+<div class="mtax-cat">
+  <h4>Imported / cross-cultural <span class="n">· 3</span></h4>
+  <p class="catnote">Chinese and other imports the market absorbs without friction (see the piece's note on this above).</p>
+  <div class="mtax-grid">
+    <div class="mrow"><span class="th">ปี่เซียะ</span><span class="gloss">Pixiu (imported Chinese wealth-beast)</span><span class="mstat">n=22 · ฿8–658</span></div>
+    <div class="mrow"><span class="th">หยกจีน</span><span class="gloss">Chinese jade charm</span><span class="mstat">n=1 · ฿80–80</span></div>
+    <div class="mrow"><span class="th">ฮก ลก ซิ่ว</span><span class="gloss">the three Chinese star-gods (Fuk-Luk-Sau)</span><span class="mstat">n=1 · ฿79–79</span></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ============ YANTRA ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">Yant · the diagram beneath the charm</div>
+      <h2>What is actually inscribed</h2>
+      <p class="lede">Nearly every charm above carries, somewhere, a <em>yant</em> — a sacred diagram of geometry, deity-syllables and <em>katha</em>. The takrut rolls one up; the sak yant poks one into skin; the <span class="th">ผ้ายันต์</span> prints one on cloth. The grammar is shared.</p>
+    </div>
+    <div class="mk-grid">
+      <div class="listings" style="gap:0">
+        <div class="terms" style="border-radius:4px">
+          <h4>Elements of a yant</h4>
+          <div class="term"><div class="t"><span class="th">ยันต์</span>Yant / yantra</div><div class="g">The diagram itself — a bounded field of power, read as an instrument, not a picture. <span class="tag trad">Tradition</span></div></div>
+          <div class="term"><div class="t"><span class="th">อุณาโลม</span>Unalome</div><div class="g">The spiralling crown-stroke marking the path to enlightenment; caps many yant. <span class="tag cat">Catalogue</span></div></div>
+          <div class="term"><div class="t"><span class="th">เลขยันต์</span>Lek yant · magic square</div><div class="g">A numeric grid whose rows sum to a constant — power stored as arithmetic. <span class="tag cat">Catalogue</span></div></div>
+          <div class="term"><div class="t"><span class="th">นะ ๑๐๘</span>The 108 na syllables</div><div class="g">A canon of seed-syllables (<em>na</em>), each a compressed invocation. <span class="tag cat">Catalogue</span></div></div>
+          <div class="term"><div class="t"><span class="th">อักษรขอม</span>Khom script</div><div class="g">The old Khmer-derived sacred alphabet in which most yant and katha are written. <span class="tag inf">Inference</span></div></div>
+        </div>
+      </div>
+      <div class="callout" style="align-self:start">
+        <div class="mark">◈</div>
+        <div>
+          <p><b>Reading the emblem above.</b> The hero mark follows the standard yant grammar drawn from the corpus's own generator geometry:</p>
+          <p>the outer square with four gates is the <b><span class="th">ภูปุระ</span> bhupura</b>, the walled ground; within it the <b>eight-petal lotus</b> holds the field; a <b>downward triangle</b> marks <em>shakti</em>, descending power; and the <b>bindu</b> at centre is the concentrated point from which the whole diagram radiates. <span class="tag inf">Inference</span> on the symbolism; <span class="tag cat">Catalogue</span> on the construction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULARY ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The formulary · ตำรา · newly opened</div>
+      <h2>How the charm is actually made</h2>
+      <p class="lede">The treatise <span class="th">ตำราสร้างเครื่องรางของขลัง</span> — 170 pages, once locked in scanned images — has now been read by OCR. It is a working manual: <b>~60 formulas</b>, each opening with the invocation <span class="th">สิทธิการิยะ</span> ("may it be accomplished"), then giving the material, the letters to inscribe, the <em>katha</em> to chant, the count of recitations, the use, and the taboos. A sample is transcribed below. <span class="tag cat">Catalogue</span> on the recipes; <span class="tag inf">Inference</span> on the English reading of the katha; <span class="tag trad">Tradition</span> on the powers claimed.</p>
+    </div>
+
+    <div class="grammar">
+      <div class="note">
+        <h3 style="font-size:21px; margin-bottom:10px">First, the grammar: <span class="th" style="color:var(--gilt)">ลงอุณาโลม</span></h3>
+        <p>Every inscribed charm is finished with the <b>unalome</b> — the reversed Khom letter <span class="th">อุ</span>, drawn as a rising crown-stroke that stands for the sage whose mind runs straight to the summit and does not scatter. The treatise sets the stroke to a syllable-ladder: each notch (<span class="th">หยัก</span>) of the stroke is "charged" with a fixed <em>na</em> before the line is drawn straight up. This is the shared grammar beneath the takrut, the tattoo, and the cloth yant.</p>
+        <p style="margin-top:12px">The formula to lay the unalome itself: <span class="th" style="color:var(--gilt)">๛ อุณาโลมา ปะนะชายะเต ๚ะ๛</span></p>
+      </div>
+      <div class="na-ladder">
+        <div class="lh">The notch-ladder of the crown-stroke · หยัก</div>
+        <div class="rung"><span class="step">3 notches</span><span class="syl">๛ มะ อะ อุ ๚ะ๛</span></div>
+        <div class="rung"><span class="step">5 notches</span><span class="syl">๛ นะโมพุทธายะ ๚ะ๛</span></div>
+        <div class="rung"><span class="step">9 notches</span><span class="syl">๛ อะสังวิสุโลปุสะพุกะ ๚ะ๛</span></div>
+        <div class="rung"><span class="step">straight up</span><span class="syl">๛ สัตถุโน พุทโธ ๚ะ๛</span></div>
+      </div>
+    </div>
+
+    <div class="recipes">
+
+      <article class="recipe">
+        <header>
+          <div class="rt">ปลัดขิก แบบที่ ๑</div>
+          <div class="rr">Palad Khik · form 1</div>
+          <div class="rfrom">links to catalogue B·07</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">Heartwood of the <span class="th">คูน</span> (golden-shower tree, <em>Cassia fistula</em>), carved to the phallic form.</span></div>
+        <div class="field"><span class="fl">Inscribe</span><span class="fv">The syllable <span class="th">อุ</span> on the principal face; <span class="th">กันหะ</span> and <span class="th">เนหะ</span> on the two flanks, two letters each.</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>กันหะ เนหะ<span class="mk">๚ะ๛</span><span class="en">"Kanha Neha" — chanted over the finished charm.</span></div></span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">Wards all sorcery and curses (<span class="th">กันคุณไสย</span>). Ground on the tail-end with liquor, it is drunk to cure poison or fever; also worn as a love-charm.</span></div>
+        <div class="field"><span class="fl">Taboo</span><span class="fv">Never keep it on the body during intercourse, nor near a menstruating woman.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">เบี้ยแก้</div>
+          <div class="rr">Bia Kae · the sealed cowrie</div>
+          <div class="rfrom">links to catalogue E·15 · after Luang Pu Bun, Wat Klang Bang Kaew</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">Mercury (<span class="th">ปรอท</span>, one <em>baht</em>-weight), a cowrie shell, subterranean stingless-bee resin, hammered lead sheet, lacquer and gold.</span></div>
+        <div class="field"><span class="fl">Rite</span><span class="fv">Consecrate the mercury <b>108×</b>, pour it into the cowrie, consecrate again 108×, then seal the shell's mouth with the resin — chanting all the while — so not a drop escapes. Wrap in lead, inscribe the <span class="th">นะมหาอุด</span> yantra, bind, lacquer and gild.</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>อะสิสะติธะนูเจวะ สัพเพเตอาวุธานิจะ ภัคคะภัคคาวิจุณณานิ โลมังมาเมนะผุสสันติ<span class="mk">๚ะ๛</span><span class="en">Over the mercury. A second katha seals the shell; a third is chanted while packing the resin. Finished with the Itipiso in all 8 directions, 108×.</span></div></span></div>
+        <div class="field"><span class="fl">For</span><span class="fv"><span class="th">มหาอุด</span> — the "great sealing," invulnerability — and to undo curses and ward pop-ghosts and forest-spirits.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">กุมารทอง</div>
+          <div class="rr">Kuman Thong · the golden child</div>
+          <div class="rfrom">links to catalogue A·08 · the historical form</div>
+        </header>
+        <div class="field"><span class="fl">Rite</span><span class="fv">The old form is frankly necromantic: the spirit is drawn from one who "died whole" (<span class="th">ตายทั้งกลม</span> — a mother lost while carrying), most potent if the death fell on a Saturday or Tuesday. It is roused, called to its offerings, then bound to the household.</span></div>
+        <div class="field"><span class="fl">Offerings</span><span class="fv">Spicy shrimp-and-fish salad (<span class="th">กุ้งพล่าปลายำ</span>) and white liquor; thereafter, rice fed every day.</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>โสสะอะนิ<span class="mk">๚ะ๛</span> rouse · <span class="mk">๛</span>สะอะนิโส<span class="mk">๚ะ๛</span> call<span class="en">A third, longer katha offers the food; all recited "according to the day's power" (ตามกำลังวัน). The child is woken and called before each feeding, and bound with a katha when set aside.</span></div></span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">To make trade prosper and to sweep away sickness and danger; the fed child guards the house and draws wealth.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">วัวธนู แบบที่ ๒</div>
+          <div class="rr">Wua Thanu · the guardian bull</div>
+          <div class="rfrom">the animated-effigy family</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">Clay or beeswax, modelled into a bull. (Its twin, <span class="th">ควายธนู</span>, is a buffalo made the same way — invoking Ishvara as its left eye, the Sun as its right, gods into its horns, tail and four feet.)</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>โอม สิทธิการ … เขากูแหลมคือหอก … สัตว์ใดเข้ามาใกล้กู ให้ตลอดวินาศฉิบหาย สวาหะ<span class="mk">๚ะ๛</span><span class="en">"…my horns are sharp as spears… whatever creature comes near me, let it be utterly destroyed."</span></div></span></div>
+        <div class="field"><span class="fl">Raise it</span><span class="fv">The bull is kept a good place, told your wishes so it understands, and — like a living beast — <b>fed grass and water</b> under its own feeding-katha.</span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">Guards the house and its wealth against every kind of thief and robber (<span class="th">โจรภัย</span>).</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">ปั้นรูปพระฤๅษี</div>
+          <div class="rr">Phra Lersi figure · form 1</div>
+          <div class="rfrom">p.34 · for the would-be healer &amp; mantra-master</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">Earth taken from the <b>tops of termite-mounds, gathered from 7 places</b>, moulded into a figure of the Great Lersi; seven named leaves sealed inside — <span class="th">ชุมแสง</span>, golden-shower, <span class="th">มะขามไก่</span>, bael, <span class="th">คันทรง</span>, <span class="th">กัลปพฤกษ์</span>, <span class="th">ชัยพฤกษ์</span>.</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>นาโคคีรียะ … พระฤๅษีสิทธิโตสังโฆ … พะกะคะสะติโตมะนะสะลีตะโต สวาหะ<span class="mk">๚ะ๛</span><span class="en">Invokes Phra Lersi Siddhi, the accomplished sage, into the figure.</span></div></span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">Whoever "would learn to be a healer, hold mantras so they rise in power, and master all the sciences and magic." The patron-charm of the practitioner himself.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">หุ่นพยนต์</div>
+          <div class="rr">Hun Phayon · the animated effigy</div>
+          <div class="rfrom">p.77–78 · the guardian golem</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">A human figure holding a club, formed from <b>graveyard earth taken from 3 places</b>, with a yantra-wrapped measure of mercury packed into its belly. A darker variant is built on the bone of one who died a violent death (<span class="th">ผีตายโหง</span>).</span></div>
+        <div class="field"><span class="fl">Katha</span><span class="fv"><div class="katha"><span class="mk">๛</span>ฆะเฏสิ ฆะเฏสิ กิงกะระณัง … ปลุก ปลุก ปลุก<span class="mk">๚ะ๛</span><span class="en">"Strike! strike! — what is your errand?" · the effigy is roused (ปลุก = wake) and set to its task.</span></div></span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">Set to guard the house and its wealth; roused, commanded, and sent — a made servant, not a worn charm.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+      <article class="recipe">
+        <header>
+          <div class="rt">มีดหมอ</div>
+          <div class="rr">Mid Mo · the ritual knife</div>
+          <div class="rfrom">p.79 · after Luang Pho Muang, Wat Pradu Song Tham</div>
+        </header>
+        <div class="field"><span class="fl">Material</span><span class="fv">A blade forged from <b>ten irons</b> — from a stupa finial, a prang finial, a prasat spire, palace-gate iron, "Nam Phi" iron, iron gathered from <b>seven cremation grounds</b>, and more — the smith keeping the 5 or 8 precepts.</span></div>
+        <div class="field"><span class="fl">Rite</span><span class="fv">Forged on an auspicious Saturday or Tuesday, bai-si offering-trays to left and right, monks chanting the Karani 7×. The finished blade is quenched <b>3 times and 7 times in <span class="th">prai</span>-oil</b> rendered from those who died in childbirth, by drowning, and by hanging.</span></div>
+        <div class="field"><span class="fl">For</span><span class="fv">The exorcist's dagger — to cut spirits, break curses, and command what the living cannot.</span></div>
+        <div class="claims"><span class="tag cat">Catalogue</span><span class="tag trad">Tradition</span></div>
+      </article>
+
+    </div>
+
+    <div class="fed">
+      <div class="mark">🌾</div>
+      <div>
+        <h3>The charm is not inert — it is fed</h3>
+        <p>The clearest thing the formulary reveals is that many of these objects are treated as <b>alive</b>. The Kuman Thong takes rice daily; the Wua Thanu takes grass and water; the <span class="th">หุ่นพยนต์</span> effigy is stuffed with mercury and fed rice, pork and liquor. A charm is not bought once and forgotten — it is <b>roused, named, fed and told its purpose</b>, and it lapses if neglected. The relationship, not the object, is the technology.</p>
+      </div>
+    </div>
+
+    <p class="sens">
+      <span class="tag inf">Inference</span> These are transcribed as documentation of a living tradition, not as instructions to follow — the Kuman Thong's historical form in particular is recorded here ethnographically; today's practice uses consecrated effigies, not human remains. OCR fidelity note: the Pali-Khmer katha are reproduced as printed, but scanned diacritics are imperfect and every sacred syllable should be checked against the page image before ritual or scholarly use. The full 170-page transcript is saved alongside the source PDF.
+    </p>
+  </div>
+</section>
+
+<!-- ============ COMPLETE INDEX ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The complete formulary · ทั้งเล่ม</div>
+      <h2>Every formula in the book</h2>
+      <p class="lede">All 160 making-formulas and yantra sections of the treatise, in the order they appear, grouped by what is being made. Page numbers are the book's own (printed) pages. The full Thai text and a faithful English translation of each — every katha, every step — is held in the manuscript corpus as a bilingual page-by-page reader (catalogue manuscript 6983). <span class="tag cat">Catalogue.</span></p>
+    </div>
+    <div class="findex">
+<div class="fcat"><h3>Buddha & deity images <span>· 18</span></h3><ul>
+<li><span class="fp">p.16</span><span class="fth">ตำราสร้างพระฉิมพลี</span><span class="fg">Manual for making Phra Chimphali (Sīvali)</span></li>
+<li><span class="fp">p.28</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๑</span><span class="fg">Manual for making Phra Phakhawambodi (Bhagavā/Bhagavambodī), version 1.</span></li>
+<li><span class="fp">p.29</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๒</span><span class="fg">Manual for making Phra Phakhawambodi, version 2.</span></li>
+<li><span class="fp">p.30</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๓</span><span class="fg">manual for making Phra Phakawambodi, form no. 3</span></li>
+<li><span class="fp">p.31</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๔</span><span class="fg">manual for making Phra Phakawambodi, form no. 4</span></li>
+<li><span class="fp">p.31</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๕</span><span class="fg">manual for making Phra Phakawambodi, form no. 5</span></li>
+<li><span class="fp">p.32</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๖</span><span class="fg">manual for making Phra Phakawambodi, form no. 6</span></li>
+<li><span class="fp">p.32</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๗</span><span class="fg">manual for making Phra Phakawambodi, form no. 7</span></li>
+<li><span class="fp">p.32</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๘</span><span class="fg">manual for making Phra Phakawambodi, form no. 8</span></li>
+<li><span class="fp">p.33</span><span class="fth">ตำราสร้างพระภควัมบดี แบบที่ ๙</span><span class="fg">manual for making Phra Phakawambodi, form no. 9</span></li>
+<li><span class="fp">p.33</span><span class="fth">ตำราสร้างพระกัจจายนะ</span><span class="fg">manual for making Phra Kajjayana (Phra Sangkachai)</span></li>
+<li><span class="fp">p.33</span><span class="fth">ตำราปั้นรูปเทวดา</span><span class="fg">manual for moulding an image of a deva</span></li>
+<li><span class="fp">p.34</span><span class="fth">ตำราปั้นรูปพระฤๅษี แบบที่ ๑</span><span class="fg">manual for moulding an image of a lersi (rishi), form no. 1</span></li>
+<li><span class="fp">p.34</span><span class="fth">ตำราปั้นรูปพระฤๅษี แบบที่ ๒</span><span class="fg">manual for moulding an image of a lersi (rishi), form no. 2</span></li>
+<li><span class="fp">p.35</span><span class="fth">ตำราปั้นรูปพระฤๅษี แบบที่ ๓</span><span class="fg">manual for moulding an image of a lersi (rishi), form no. 3</span></li>
+<li><span class="fp">p.76</span><span class="fth">ตำราแกะรูปราชสีห์</span><span class="fg">Formula for carving a rachasi (mythical lion) figure</span></li>
+<li><span class="fp">p.101</span><span class="fth">ตำราสร้างประคำพระเจ้ากลืนไตรภพ</span><span class="fg">Manual for making the prayer-beads of the Buddha who swallows the three worlds</span></li>
+<li><span class="fp">p.154</span><span class="fth">ตำราสร้างธงพระฉิมพลี</span><span class="fg">Manual for making a Phra Sīvali (Chimphali) banner</span></li>
+</ul></div>
+<div class="fcat"><h3>Yantra, inscription & primer <span>· 2</span></h3><ul>
+<li><span class="fp">p.26</span><span class="fth">ยันต์เทียนพราชปุตโต</span><span class="fg">The candle-yantra of (Phra) Rājaputto.</span></li>
+<li><span class="fp">p.153</span><span class="fth">ตำราลงยันต์รองกระถางธูปเรียกคน</span><span class="fg">Manual for inscribing a yantra to place under an incense burner, to summon people</span></li>
+</ul></div>
+<div class="fcat"><h3>Animal & effigy charms <span>· 30</span></h3><ul>
+<li><span class="fp">p.57</span><span class="fth">ตำราสร้างตุ๊กตา</span><span class="fg">Manual for making a doll (talisman)</span></li>
+<li><span class="fp">p.58</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๑</span><span class="fg">Manual for making a Nang Kwak (beckoning lady) — version 1</span></li>
+<li><span class="fp">p.59</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๒</span><span class="fg">Manual for making a Nang Kwak — version 2</span></li>
+<li><span class="fp">p.60</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๓</span><span class="fg">Manual for making a Nang Kwak — version 3</span></li>
+<li><span class="fp">p.61</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๔</span><span class="fg">Manual for making a Nang Kwak — version 4</span></li>
+<li><span class="fp">p.62</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๕</span><span class="fg">Manual for making a Nang Kwak — version 5</span></li>
+<li><span class="fp">p.63</span><span class="fth">ตำราสร้างนางกวัก แบบที่ ๖</span><span class="fg">Manual for making a Nang Kwak — version 6</span></li>
+<li><span class="fp">p.64</span><span class="fth">ตำราสร้างพยนต์นกกาสัก</span><span class="fg">Manual for making a phayon (animated golem) in the form of the Kasak bird</span></li>
+<li><span class="fp">p.65</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๑</span><span class="fg">Manual for making Hanuman — version 1</span></li>
+<li><span class="fp">p.65</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๒</span><span class="fg">Manual for making Hanuman — version 2</span></li>
+<li><span class="fp">p.66</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๓</span><span class="fg">Formula for making Hanuman, type 3</span></li>
+<li><span class="fp">p.66</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๔</span><span class="fg">Formula for making Hanuman, type 4</span></li>
+<li><span class="fp">p.67</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๕</span><span class="fg">Formula for making Hanuman, type 5</span></li>
+<li><span class="fp">p.67</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๖</span><span class="fg">Formula for making Hanuman, type 6</span></li>
+<li><span class="fp">p.68</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๗</span><span class="fg">Formula for making Hanuman, type 7</span></li>
+<li><span class="fp">p.69</span><span class="fth">ตำราสร้างหนุมาน แบบที่ ๘</span><span class="fg">Formula for making Hanuman, type 8</span></li>
+<li><span class="fp">p.70</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๑</span><span class="fg">Formula for carving a tiger fang, type 1</span></li>
+<li><span class="fp">p.72</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๒</span><span class="fg">Formula for carving a tiger fang, type 2</span></li>
+<li><span class="fp">p.72</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๓</span><span class="fg">Formula for carving a tiger fang, type 3</span></li>
+<li><span class="fp">p.73</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๔</span><span class="fg">Formula for carving a tiger fang, type 4</span></li>
+<li><span class="fp">p.73</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๕</span><span class="fg">Formula for carving a tiger fang, type 5</span></li>
+<li><span class="fp">p.74</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๖</span><span class="fg">Formula for carving a tiger fang, type 6</span></li>
+<li><span class="fp">p.75</span><span class="fth">ตำราแกะเขี้ยวเสือ แบบที่ ๗</span><span class="fg">Formula for carving a tiger fang, type 7</span></li>
+<li><span class="fp">p.76</span><span class="fth">ตำราสร้างวัวธนู แบบที่ ๑</span><span class="fg">Formula for making a bull-yantra (wua thanu), type 1</span></li>
+<li><span class="fp">p.77</span><span class="fth">ตำราสร้างวัวธนู แบบที่ ๒</span><span class="fg">Formula for making a bull-yantra (wua thanu), type 2</span></li>
+<li><span class="fp">p.77</span><span class="fth">ตำราสร้างควายธนู</span><span class="fg">Formula for making a buffalo-yantra (khwai thanu)</span></li>
+<li><span class="fp">p.77</span><span class="fth">ตำราสร้างหุ่นพยนต์ แบบที่ ๑</span><span class="fg">Formula for making an animated effigy (hun phayon), type 1</span></li>
+<li><span class="fp">p.78</span><span class="fth">ตำราสร้างหุ่นพยนต์ แบบที่ ๒</span><span class="fg">Formula for making a hun phayon (animated effigy/golem), type 2</span></li>
+<li><span class="fp">p.92</span><span class="fth">ตำราสร้างจระเข้ แบบที่ ๑</span><span class="fg">Manual for making a crocodile (amulet), formula no. 1</span></li>
+<li><span class="fp">p.92</span><span class="fth">ตำราสร้างจระเข้ แบบที่ ๒</span><span class="fg">Manual for making a crocodile (amulet), formula no. 2</span></li>
+</ul></div>
+<div class="fcat"><h3>Spirit charms <span>· 3</span></h3><ul>
+<li><span class="fp">p.83</span><span class="fth">ตำราสร้างลูกกรอก</span><span class="fg">Formula for making a luk krok (fetus-spirit amulet)</span></li>
+<li><span class="fp">p.84</span><span class="fth">ตำราสร้างกุมารทอง</span><span class="fg">Formula for making a kuman thong (golden boy child-spirit)</span></li>
+<li><span class="fp">p.86</span><span class="fth">ตำราสร้างเจ้ารักเจ้ายม</span><span class="fg">Formula for making a chao rak chao yom (twin love/spirit figures)</span></li>
+</ul></div>
+<div class="fcat"><h3>Blades & weapons <span>· 5</span></h3><ul>
+<li><span class="fp">p.79</span><span class="fth">ตำราสร้างมีดหมอ แบบที่ ๑</span><span class="fg">Formula for making a mordu knife (ritual exorcist's dagger), type 1</span></li>
+<li><span class="fp">p.81</span><span class="fth">ตำราสร้างมีดหมอ แบบที่ ๒</span><span class="fg">Formula for making a mordu knife (ritual exorcist's dagger), type 2</span></li>
+<li><span class="fp">p.146</span><span class="fth">ตำราลงกระหม่อมผีตายโหง</span><span class="fg">Manual for inscribing the crown-skull of one who died a violent death</span></li>
+<li><span class="fp">p.147</span><span class="fth">ตำราลงกระบอง</span><span class="fg">Manual for inscribing a cudgel/club</span></li>
+<li><span class="fp">p.148</span><span class="fth">ตำราสร้างอาวุธพญายม</span><span class="fg">Manual for making the weapon of Phaya Yom (Yama, Lord of Death)</span></li>
+</ul></div>
+<div class="fcat"><h3>Rings, cowries, waist charms <span>· 18</span></h3><ul>
+<li><span class="fp">p.87</span><span class="fth">ตำราสร้างแหวน แบบที่ ๑</span><span class="fg">Formula for making a ring (waen), type 1</span></li>
+<li><span class="fp">p.88</span><span class="fth">ตำราสร้างแหวน แบบที่ ๒</span><span class="fg">Formula for making a ring (waen), type 2</span></li>
+<li><span class="fp">p.89</span><span class="fth">ตำราสร้างแหวน แบบที่ ๓</span><span class="fg">Formula for making a ring (waen), type 3</span></li>
+<li><span class="fp">p.90</span><span class="fth">ตำราสร้างแหวน แบบที่ ๔</span><span class="fg">Manual for making a ring, formula no. 4</span></li>
+<li><span class="fp">p.90</span><span class="fth">ตำราสร้างแหวน แบบที่ ๕</span><span class="fg">Manual for making a ring, formula no. 5</span></li>
+<li><span class="fp">p.90</span><span class="fth">ตำราสร้างแหวน แบบที่ ๖</span><span class="fg">Manual for making a ring, formula no. 6</span></li>
+<li><span class="fp">p.91</span><span class="fth">ตำราสร้างแหวน แบบที่ ๗</span><span class="fg">Manual for making a ring, formula no. 7</span></li>
+<li><span class="fp">p.91</span><span class="fth">ตำราสร้างแหวน แบบที่ ๘</span><span class="fg">Manual for making a ring, formula no. 8</span></li>
+<li><span class="fp">p.93</span><span class="fth">ตำราสร้างเบี้ยแก้</span><span class="fg">Manual for making a bia-kae (cowrie-shell amulet)</span></li>
+<li><span class="fp">p.93</span><span class="fth">ตำราสร้างปลัดขิก แบบที่ ๑</span><span class="fg">Manual for making a palad khik (phallic amulet), formula no. 1</span></li>
+<li><span class="fp">p.94</span><span class="fth">ตำราสร้างปลัดขิก แบบที่ ๒</span><span class="fg">Manual for making a palad khik, formula no. 2</span></li>
+<li><span class="fp">p.94</span><span class="fth">ตำราสร้างปลัดขิก แบบที่ ๓</span><span class="fg">Manual for making a palad khik, formula no. 3</span></li>
+<li><span class="fp">p.117</span><span class="fth">ตำราสร้างเชือกคาด แบบที่ ๑</span><span class="fg">Manual for making a waist-cord (belt), formula no. 1</span></li>
+<li><span class="fp">p.118</span><span class="fth">ตำราสร้างเชือกคาด แบบที่ ๒</span><span class="fg">Manual for making a waist-cord (belt), formula no. 2</span></li>
+<li><span class="fp">p.120</span><span class="fth">ตำราสร้างเชือกคาด แบบที่ ๓</span><span class="fg">Manual for making a waist-cord (belt), formula no. 3</span></li>
+<li><span class="fp">p.121</span><span class="fth">ตำราสร้างหวายคาดเอว</span><span class="fg">Manual for making a rattan waist-band</span></li>
+<li><span class="fp">p.121</span><span class="fth">ตำราสร้างหวายกำราบผี</span><span class="fg">Manual for making a rattan for subduing ghosts</span></li>
+<li><span class="fp">p.146</span><span class="fth">ตำราลงผ้าพาดบ่า</span><span class="fg">Manual for inscribing a shoulder-cloth</span></li>
+</ul></div>
+<div class="fcat"><h3>Beads & pellets <span>· 23</span></h3><ul>
+<li><span class="fp">p.95</span><span class="fth">ตำราสร้างประคำเถามวกแดง</span><span class="fg">Manual for making a prayer-bead (rosary) of red muak vine</span></li>
+<li><span class="fp">p.95</span><span class="fth">ตำราสร้างประคำโทน แบบที่ ๑</span><span class="fg">Manual for making a single (thon) prayer-bead, formula no. 1</span></li>
+<li><span class="fp">p.95</span><span class="fth">ตำราสร้างลูกประคำโทน แบบที่ ๒</span><span class="fg">Manual for making a single (thon) prayer-bead, formula no. 2</span></li>
+<li><span class="fp">p.96</span><span class="fth">ตำราสร้างประคำ ๕ ลูก แบบที่ ๑</span><span class="fg">Manual for making a 5-bead prayer string, formula no. 1</span></li>
+<li><span class="fp">p.97</span><span class="fth">ตำราสร้างประคำ ๕ ลูก แบบที่ ๒</span><span class="fg">Manual for making a 5-bead prayer string, formula no. 2</span></li>
+<li><span class="fp">p.98</span><span class="fth">ตำราสร้างประคำ ๕ ลูก แบบที่ ๓</span><span class="fg">Manual for making a 5-bead prayer string, formula no. 3</span></li>
+<li><span class="fp">p.98</span><span class="fth">ตำราสร้างประคำ ๕ ลูก แบบที่ ๔</span><span class="fg">Manual for making a 5-bead prayer string, formula no. 4</span></li>
+<li><span class="fp">p.99</span><span class="fth">ตำราสร้างประคำ ๕ ลูก แบบที่ ๕</span><span class="fg">Manual for making a 5-bead prayer string, formula no. 5</span></li>
+<li><span class="fp">p.99</span><span class="fth">ตำราสร้างประคำ ๙ ลูก</span><span class="fg">Manual for making a 9-bead prayer string</span></li>
+<li><span class="fp">p.100</span><span class="fth">ตำราสร้างประคำ ๗ ลูก</span><span class="fg">Manual for making a 7-bead prayer string</span></li>
+<li><span class="fp">p.109</span><span class="fth">ตำราสร้างประคำมะกล่ำดำ</span><span class="fg">Manual for making a rosary of black jequirity (crab's-eye) seeds</span></li>
+<li><span class="fp">p.112</span><span class="fth">ตำราสร้างประคำ ๑๐๘ ลูก แบบที่ ๑</span><span class="fg">Manual for making a 108-bead rosary, method no. 1</span></li>
+<li><span class="fp">p.112</span><span class="fth">ตำราสร้างประคำ ๑๐๘ ลูก แบบที่ ๒</span><span class="fg">Manual for making a 108-bead rosary, method no. 2</span></li>
+<li><span class="fp">p.113</span><span class="fth">ตำราสร้างประคำ ๑๐๘ ลูก แบบที่ ๓</span><span class="fg">Manual for making a 108-bead rosary, method no. 3</span></li>
+<li><span class="fp">p.113</span><span class="fth">ตำราสร้างประคำ ๑๐๘ ลูก แบบที่ ๔</span><span class="fg">Manual for making a 108-bead rosary, method no. 4</span></li>
+<li><span class="fp">p.114</span><span class="fth">ตำราสร้างประคำ ๑๐๘ ลูก แบบที่ ๔</span><span class="fg">Manual for making a 108-bead rosary, formula no. 4</span></li>
+<li><span class="fp">p.114</span><span class="fth">ตำราสร้างลูกอม แบบที่ ๑</span><span class="fg">Manual for making a lucky mouth-pellet (luk om), formula no. 1</span></li>
+<li><span class="fp">p.115</span><span class="fth">ตำราสร้างลูกอม แบบที่ ๒</span><span class="fg">Manual for making a lucky mouth-pellet, formula no. 2</span></li>
+<li><span class="fp">p.115</span><span class="fth">ตำราสร้างลูกอม แบบที่ ๓</span><span class="fg">Manual for making a lucky mouth-pellet, formula no. 3</span></li>
+<li><span class="fp">p.116</span><span class="fth">ตำราสร้างลูกอม แบบที่ ๔</span><span class="fg">Manual for making a lucky mouth-pellet, formula no. 4</span></li>
+<li><span class="fp">p.116</span><span class="fth">ตำราสร้างลูกอม แบบที่ ๕</span><span class="fg">Manual for making a lucky mouth-pellet, formula no. 5</span></li>
+<li><span class="fp">p.145</span><span class="fth">ตำราสร้างลูกหมาก</span><span class="fg">Manual for making a betel-nut charm (luk mak)</span></li>
+<li><span class="fp">p.147</span><span class="fth">ตำราสร้างลูกสวาด</span><span class="fg">Manual for making a luk sawat (charm bead/nut)</span></li>
+</ul></div>
+<div class="fcat"><h3>Takrut & pitsamon scrolls <span>· 25</span></h3><ul>
+<li><span class="fp">p.123</span><span class="fth">ตำราสร้างตะกรุด ๓ ดอก (ค้าขาย)</span><span class="fg">Manual for making 3 takrut scrolls (for trade/commerce)</span></li>
+<li><span class="fp">p.124</span><span class="fth">ตำราสร้างตะกรุดจักรพรรดิ (ค้าขาย)</span><span class="fg">Manual for making a Chakraphat (universal-monarch) takrut, for trade</span></li>
+<li><span class="fp">p.125</span><span class="fth">ตำราสร้างตะกรุดสาลิกาลิ้นทอง</span><span class="fg">Manual for making a golden-tongued salika (mynah) takrut</span></li>
+<li><span class="fp">p.125</span><span class="fth">ตำราสร้างตะกรุดสาลิกาลิ้นทอง</span><span class="fg">Manual for making a golden-tongued salika (mynah) takrut</span></li>
+<li><span class="fp">p.126</span><span class="fth">ตำราสร้างตะกรุดสาลิกาลิ้นทอง</span><span class="fg">Manual for making the golden-tongued sarika (myna) takrut</span></li>
+<li><span class="fp">p.126</span><span class="fth">ตำราสร้างสาลิกาจับปากโลง</span><span class="fg">Manual for making the sarika-perched-on-the-coffin-mouth</span></li>
+<li><span class="fp">p.127</span><span class="fth">ตำราสร้างตะกรุดสาลิกามโหสถ</span><span class="fg">Manual for making the Mahosot sarika takrut</span></li>
+<li><span class="fp">p.128</span><span class="fth">ตำราสร้างตะกรุดโทน (ฝนแสนห่า)</span><span class="fg">Manual for making the single (thon) takrut — "hundred-thousand rainshowers"</span></li>
+<li><span class="fp">p.130</span><span class="fth">ตำราสร้างตะกรุดโทน (คู่ชีวิต)</span><span class="fg">Manual for making the single (thon) takrut — "life companion"</span></li>
+<li><span class="fp">p.132</span><span class="fth">ตำราสร้างตะกรุดโทน (คู่ชีวิต)</span><span class="fg">Manual for making the single (thon) takrut — "life companion"</span></li>
+<li><span class="fp">p.133</span><span class="fth">ตำราสร้างตะกรุดโทน (ดอกจันทร์)</span><span class="fg">Manual for making the single (thon) takrut — "Moon-flower"</span></li>
+<li><span class="fp">p.135</span><span class="fth">ตำราสร้างตะกรุดโทน (มหาจังงัง)</span><span class="fg">Manual for making the single (thon) takrut — "great paralysis" (mahaa jangang)</span></li>
+<li><span class="fp">p.136</span><span class="fth">ตำราสร้างตะกรุดโทน (พระนเรศวร)</span><span class="fg">Manual for making the single (thon) takrut — "King Naresuan"</span></li>
+<li><span class="fp">p.137</span><span class="fth">ตำราสร้างตะกรุดโทน (เพ็ญวันเสาร์)</span><span class="fg">Manual for making the single (thon) takrut — "Saturday full moon"</span></li>
+<li><span class="fp">p.138</span><span class="fth">ตำราสร้างตะกรุดโทน (สัมพุทเธ)</span><span class="fg">Manual for making a single takrut (Samputtē)</span></li>
+<li><span class="fp">p.139</span><span class="fth">ตำราสร้างตะกรุดโทน (พอกครั่ง)</span><span class="fg">Manual for making a single takrut (lac-coated)</span></li>
+<li><span class="fp">p.139</span><span class="fth">ตำราสร้างตะกรุด ๔ ดอก เพชรสี่ด้าน</span><span class="fg">Manual for making 4 takrut, Phet Si Dan (diamond-four-sides)</span></li>
+<li><span class="fp">p.140</span><span class="fth">ตำราสร้างพิสมร ๕ ดอก</span><span class="fg">Manual for making 5 phitsamon (protective amulet-pendants)</span></li>
+<li><span class="fp">p.140</span><span class="fth">ตำราสร้างตะกรุด ๙ ดอก</span><span class="fg">Manual for making 9 takrut</span></li>
+<li><span class="fp">p.141</span><span class="fth">ตำราสร้างตะกรุดไม้รวก</span><span class="fg">Manual for making a takrut of mai ruak (a slender bamboo)</span></li>
+<li><span class="fp">p.141</span><span class="fth">ตำราสร้างพิสมรเพชรหลีก</span><span class="fg">Manual for making phitsamon Phet Lik (diamond-that-deflects)</span></li>
+<li><span class="fp">p.142</span><span class="fth">ตำราสร้างตะกรุดหนังเสือ แบบที่ ๑</span><span class="fg">Manual for making a tiger-skin takrut, form 1</span></li>
+<li><span class="fp">p.143</span><span class="fth">ตำราสร้างตะกรุดหนังเสือ แบบที่ ๒</span><span class="fg">Manual for making a tiger-skin takrut, form 2</span></li>
+<li><span class="fp">p.144</span><span class="fth">ตำราสร้างตะกรุดหนังเสือ แบบที่ ๓</span><span class="fg">Manual for making a tiger-skin takrut, form 3</span></li>
+<li><span class="fp">p.144</span><span class="fth">ตำราสร้างตะกรุดหนังเสือ แบบที่ ๔</span><span class="fg">Manual for making a tiger-skin takrut, form 4</span></li>
+</ul></div>
+<div class="fcat"><h3>Oils, salves & medicine <span>· 20</span></h3><ul>
+<li><span class="fp">p.35</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑</span><span class="fg">manual for cooking beeswax salve, form no. 1</span></li>
+<li><span class="fp">p.36</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๒</span><span class="fg">manual for cooking beeswax salve, form no. 2</span></li>
+<li><span class="fp">p.37</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๓</span><span class="fg">manual for cooking beeswax salve, form no. 3</span></li>
+<li><span class="fp">p.37</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๔</span><span class="fg">manual for cooking beeswax salve, form no. 4</span></li>
+<li><span class="fp">p.38</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๕</span><span class="fg">manual for cooking beeswax salve, form no. 5</span></li>
+<li><span class="fp">p.38</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๖</span><span class="fg">manual for cooking beeswax salve, form no. 6</span></li>
+<li><span class="fp">p.39</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๗</span><span class="fg">manual for cooking beeswax salve, form no. 7</span></li>
+<li><span class="fp">p.40</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๘</span><span class="fg">manual for cooking beeswax salve, form no. 8</span></li>
+<li><span class="fp">p.41</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๙</span><span class="fg">manual for cooking beeswax salve, form no. 9</span></li>
+<li><span class="fp">p.42</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑๐</span><span class="fg">Beeswax-boiling manual, formula no. 10</span></li>
+<li><span class="fp">p.44</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑๑</span><span class="fg">Beeswax-boiling manual, formula no. 11</span></li>
+<li><span class="fp">p.45</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑๒</span><span class="fg">Beeswax-boiling manual, formula no. 12</span></li>
+<li><span class="fp">p.46</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑๓</span><span class="fg">Beeswax-boiling manual, formula no. 13</span></li>
+<li><span class="fp">p.47</span><span class="fth">ตำราหุงสีผึ้ง แบบที่ ๑๔</span><span class="fg">Beeswax-boiling manual, formula no. 14</span></li>
+<li><span class="fp">p.48</span><span class="fth">ตำราหุงน้ำมัน</span><span class="fg">Oil-boiling manual</span></li>
+<li><span class="fp">p.49</span><span class="fth">ตำราหุงน้ำมันเสน่ห์ แบบที่ ๑</span><span class="fg">Charm-oil-boiling manual, formula no. 1</span></li>
+<li><span class="fp">p.50</span><span class="fth">ตำราหุงน้ำมันเสน่ห์ แบบที่ ๒</span><span class="fg">Charm-oil-boiling manual, formula no. 2</span></li>
+<li><span class="fp">p.50</span><span class="fth">ตำราหุงน้ำมันเสน่ห์ แบบที่ ๓</span><span class="fg">Charm-oil-boiling manual, formula no. 3</span></li>
+<li><span class="fp">p.51</span><span class="fth">ตำราหุงน้ำมันเสน่ห์ แบบที่ ๔</span><span class="fg">Charm-oil-boiling manual, formula no. 4</span></li>
+<li><span class="fp">p.145</span><span class="fth">ตำราสร้างแท่งยา</span><span class="fg">Manual for making a medicine bar/stick</span></li>
+</ul></div>
+<div class="fcat"><h3>Cloth, banner, lamp, fan & misc <span>· 14</span></h3><ul>
+<li><span class="fp">p.122</span><span class="fth">ตำราสร้างปลาตะเพียนเงิน ตะเพียนทอง</span><span class="fg">Manual for making a silver carp / golden carp charm</span></li>
+<li><span class="fp">p.122</span><span class="fth">ตำราสร้างปลาตะเพียนทอง</span><span class="fg">Manual for making a golden carp charm</span></li>
+<li><span class="fp">p.148</span><span class="fth">ตำราสร้างหอยโข่ง</span><span class="fg">Manual for making a hoi khong (apple-snail shell charm)</span></li>
+<li><span class="fp">p.148</span><span class="fth">ตำราสร้างไม้เท้า แบบที่ ๑</span><span class="fg">Manual for making a staff/walking-stick, form 1</span></li>
+<li><span class="fp">p.149</span><span class="fth">ตำราสร้างไม้เท้า แบบที่ ๒</span><span class="fg">Manual for making a staff/walking-stick, form 2</span></li>
+<li><span class="fp">p.150</span><span class="fth">ตำราลงผ้าเช็ดหน้า แบบที่ ๑</span><span class="fg">Manual for inscribing a face-wiping cloth, formula no. 1</span></li>
+<li><span class="fp">p.151</span><span class="fth">ตำราลงผ้าเช็ดหน้า แบบที่ ๒</span><span class="fg">Manual for inscribing a face-wiping cloth, formula no. 2</span></li>
+<li><span class="fp">p.152</span><span class="fth">ตำราลงผ้าเช็ดหน้า แบบที่ ๓</span><span class="fg">Manual for inscribing a face-wiping cloth, formula no. 3</span></li>
+<li><span class="fp">p.155</span><span class="fth">ตำราสร้างธงพระจุฬามณี</span><span class="fg">Manual for making a Phra Chulamani banner</span></li>
+<li><span class="fp">p.156</span><span class="fth">ตำราสร้างประทีปบูชา</span><span class="fg">Manual for making a votive lamp for worship</span></li>
+<li><span class="fp">p.159</span><span class="fth">ตำราสร้างพัด แบบที่ ๑</span><span class="fg">Manual for making a ceremonial fan, formula no. 1</span></li>
+<li><span class="fp">p.160</span><span class="fth">ตำราสร้างพัด แบบที่ ๒</span><span class="fg">Manual for making a ceremonial fan, formula no. 2</span></li>
+<li><span class="fp">p.161</span><span class="fth">ตำราสร้างพัด แบบที่ ๓</span><span class="fg">Manual for making a ceremonial fan, formula no. 3</span></li>
+<li><span class="fp">p.162</span><span class="fth">ตำราสร้างพัด แบบที่ ๔</span><span class="fg">Manual for making a fan (pat), pattern no. 4</span></li>
+</ul></div>
+<div class="fcat"><h3>Other <span>· 2</span></h3><ul>
+<li><span class="fp">p.—</span><span class="fth">ตำราสร้าง เครื่องรางของขลัง</span><span class="fg">cover title — "Manual for Making Amulets and Charms"</span></li>
+<li><span class="fp">p.52</span><span class="fth">ตำราสร้างพระราหู สุริยประภา จันทรประภา</span><span class="fg">Manual for making Phra Rahu, Suriya-prapha (solar radiance), Chantra-prapha (lunar radiance)</span></li>
+</ul></div>
+</div>
+  </div>
+</section>
+
+<!-- ============ MAKERS & TEMPLES ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">Provenance · maker ↔ temple</div>
+      <h2>Whose hand, which wat</h2>
+      <p class="lede">In the amulet trade, value follows lineage: a charm is "of" a named monk and a named temple. These maker–temple pairs recur across the marketplace listings — the living registry of authenticity. <span class="tag cat">Catalogue.</span></p>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Master</th><th>Temple</th><th>Known for</th><th>Domain</th></tr></thead>
+        <tbody>
+          <tr><td><span class="th">หลวงปู่ทิม</span><div class="r">Luang Pu Tim</div></td><td><span class="th">วัดละหารไร่</span><div class="r">Wat Lahan Rai, Rayong</div></td><td>Luk-om &amp; Plai Kuman guardian charms</td><td>โชคลาภ · แคล้วคลาด · เมตตา</td></tr>
+          <tr><td><span class="th">หลวงพ่อกวย</span><div class="r">Luang Pho Guay</div></td><td><span class="th">วัดโฆสิตาราม</span><div class="r">Wat Khositaram, Chainat</div></td><td>Khun Paen Plai Kuman · takrut</td><td>เสน่ห์ · คงกระพัน</td></tr>
+          <tr><td><span class="th">หลวงพ่อเดิม</span><div class="r">Luang Pho Doem</div></td><td><span class="th">วัดหนองโพ</span><div class="r">Wat Nong Pho, Nakhon Sawan</div></td><td>Lacquered takrut scrolls</td><td>ป้องกันตัว</td></tr>
+          <tr><td><span class="th">หลวงพ่อเปิ่น</span><div class="r">Luang Pho Poen</div></td><td><span class="th">วัดบางพระ</span><div class="r">Wat Bang Phra, Nakhon Pathom</div></td><td>Bia Kae counter-charm · sak yant</td><td>กันคุณไสย</td></tr>
+          <tr><td><span class="th">หลวงพ่อเงิน</span><div class="r">Luang Pho Ngoen</div></td><td><span class="th">วัดบางคลาน</span><div class="r">Wat Bang Khlan, Phichit</div></td><td>Cast "floating" figures · takrut in base</td><td>โชคลาภ · เรียกทรัพย์</td></tr>
+          <tr><td><span class="th">ครูบาศรีวิชัย</span><div class="r">Khruba Srivichai</div></td><td><span class="th">ดอยสุเทพ</span><div class="r">Doi Suthep, Chiang Mai</div></td><td>Lanna saint medallions</td><td>บารมี · ป้องกัน</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARKETPLACE ============ -->
+<section>
+  <div class="wrap">
+    <div class="sect-head">
+      <div class="eyebrow">The living market · 3,459 listings</div>
+      <h2>The charm on the phone screen</h2>
+      <p class="lede">The marketplace is not a debasement of the tradition — it is where the tradition currently speaks. Sellers name a piece's <span class="th">พุทธคุณ</span> plainly; buyers shop for a specific domain of power. These are real listing titles from the corpus, verbatim. <span class="tag cat">Catalogue.</span></p>
+    </div>
+    <div class="mk-grid">
+      <div class="listings">
+        <div class="listing"><span class="th">ลูกอมหลวงปู่ทิม วัดละหารไร่ พุทธคุณโดดเด่นทาง โชคลาภ แคล้วคลาด เมตตาเสน่ห์มหานิยม</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">หลวงพ่อเงิน องค์ลอย วัดบางคลาน ใต้ฐานฝังกริ่ง ตอกตัวเลข</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">ขุนแผนพลายกุมาร หลวงพ่อกวย วัดโฆษิตาราม จ.ชัยนาท</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">จี้พญาครุฑล้อมเพชร พกแก้ดวงตก ป้องกันคุณไสย</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">เงินฮาง เครื่องรางบูชายุคเก่า บูชาแล้วจะมีกินมีใช้ เงินทองไหลมาเทมา</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">[แก้ปีชง ๒๕๖๙] เหรียญ ๑๒ นักษัตริย์ เครื่องรางเรียกทรัพย์</span><span class="px">amulet</span></div>
+        <div class="listing"><span class="th">ปี่เซียะหมุนได้ พวงกุญแจ เร่งดวงการเงิน แก้ปีชง · PIXIU</span><span class="px">import</span></div>
+      </div>
+      <div class="terms">
+        <h4>The seller's vocabulary of power</h4>
+        <div class="term"><div class="t"><span class="th">พุทธคุณ</span>Phutthakhun</div><div class="g">A piece's spiritual efficacy — the quality being sold.</div></div>
+        <div class="term"><div class="t"><span class="th">โชคลาภ</span>Chok-lap</div><div class="g">Windfall, fortune, luck drawn in.</div></div>
+        <div class="term"><div class="t"><span class="th">แคล้วคลาด</span>Khlaeo-khlat</div><div class="g">Narrow escape — harm that passes you by.</div></div>
+        <div class="term"><div class="t"><span class="th">เมตตามหานิยม</span>Metta mahaniyom</div><div class="g">Loving-kindness &amp; wide popularity; being favoured.</div></div>
+        <div class="term"><div class="t"><span class="th">กันคุณไสย</span>Kan khun-sai</div><div class="g">A shield against black magic and curses.</div></div>
+        <div class="term"><div class="t"><span class="th">แก้ปีชง</span>Kae pi-chong</div><div class="g">To remedy a clashing zodiac year — modern, calendar-driven demand.</div></div>
+      </div>
+    </div>
+    <p style="margin-top:22px; color:var(--ink-soft); font-size:15.5px; max-width:74ch">
+      <span class="tag inf">Inference</span> The market absorbs freely: Chinese <span class="th">ปี่เซียะ</span> (Pixiu) and Japanese <span class="th">โอมาโมริ</span> (omamori) are catalogued and sold alongside temple amulets without friction. A charm is judged by the power it carries, not the border it came from.
+    </p>
+  </div>
+</section>
+
+<!-- ============ SOURCING HONESTY ============ -->
+<section>
+  <div class="wrap">
+    <div class="callout">
+      <div class="mark">❦</div>
+      <div>
+        <p><b>The deepest seam, now opened.</b> The 170-page treatise <span class="th">ตำราสร้างเครื่องรางของขลัง</span> ("Treatise on Making Sacred Charms &amp; Amulets") once existed in the corpus only as scanned page images — its recipes locked. It has now been read by OCR, and the <em>formulary</em> above is drawn straight from its pages: real materials, real katha, real rites. The ledger is one seam deeper than it was.</p>
+        <p>It is now fully transcribed <em>and translated</em> — all 170 pages, page by page, re-read at high resolution: <b>160 formulas</b>, <b>435 katha</b>, Thai beside English, from the Khom-script primer that opens the book to the ceremonial fan that closes it. The complete index sits below; the seven recipes above are a reader's selection. The bilingual text is loaded into the manuscript corpus as a first-class volume — a page-by-page reader (Thai + English) keyed to catalogue manuscript 6983. What remains is a scholar's proofing of the Pali-Khmer katha, whose orthography the book itself spells inconsistently. <span class="tag cat">Catalogue</span> on what the treatise records; <span class="tag inf">Inference</span> on the reading of its incantations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--ink)">Sacred Charms of Thailand</b> · a working reference drawn from a manuscript &amp; marketplace corpus of Thai and Lanna wichaa (<span class="th">วิชา</span>). Thai script preserved throughout; romanisation follows common transliteration, not RTGS strictly.</p>
+    <p style="margin-top:10px">Claims are tagged <span style="color:var(--gilt)">Catalogue</span> (recorded fact), <span style="color:var(--cinnabar)">Tradition</span> (practitioner belief, reported faithfully), or <span style="color:var(--indigo)">Inference</span> (reasoned context). The tradition is represented as a living, continuous practice — no sorting into authentic versus commercial, sacred versus for-sale.</p>
+  </div>
+</footer>
+
+<script>
+  // Progressive reveal for cards on scroll — enhancement only, content is present without JS.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.style.animation = 'rise .6s cubic-bezier(.2,.7,.2,1) forwards'; io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.spec, .era, .key, .listing').forEach((el) => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      io.observe(el);
+    });
+  }
+</script>
