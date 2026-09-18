@@ -8,3 +8,13 @@ Standalone reference artifact (open in any browser).
 Note: this is an independent HTML export. The living amulet/charm reference that
 is wired into the manuscript corpus lives in the `manuscript-wiki` / `nanobotco-lanna`
 projects — keep this one as a static snapshot, not the source of truth.
+
+
+## Licence
+
+Records, prose and pages: CC BY-SA 4.0. Code: AGPL-3.0-or-later. Anything
+carried in from elsewhere keeps its own terms — see [LICENSE](LICENSE).
+
+**Commercial licence.** If share-alike doesn't fit your use — a corpus, a
+product, a model — a commercial licence is available.
+[Open an issue](https://github.com/NaNoBotCo/amulet-reference/issues) and say what you need.
